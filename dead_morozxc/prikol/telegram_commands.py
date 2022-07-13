@@ -1,15 +1,19 @@
 import telebot
 from telebot import types
 from django.conf import settings
-from .models import User_info
-from .models import User_Image
+from .models import Userinfo
+from .models import UserImage
+from .models import UserTask
 from PIL import Image
 from io import BytesIO
+from django.core.files.images import ImageFile
 #from .models import Team
 from django.contrib.auth.models import User
 import psycopg2
 import time
+
 from .menus import get_menu
+from .messages import get_message
 
 bot = telebot.TeleBot(settings.DEAD_MOROZXC_TOKEN, threaded = False)
 bot.remove_webhook()
@@ -23,6 +27,7 @@ class TelegramCommand():
 		{"text" : "Задание выполнено", "function" : self.get_screen},
 		{"text" : "/start", "function" : self.greetings},
 		{"text" : "/main_menu", "function" : self.greetings},
+		{"text" : "Дай задание", "function" : self.give_task},
 		]
 
 		for c in commands_list:
@@ -38,7 +43,8 @@ class TelegramCommand():
 			self.command = False
 			return
 
-		self.user_info = User_info.objects.get(user = self.u)
+		self.user_info = Userinfo.objects.get(user = self.u)
+		self.user_t = self.user_info.user_task
 		self.message = message
 		self.content = message.text
 		if self.user_info.current_command:
@@ -67,6 +73,35 @@ class TelegramCommand():
 		response["text"] = "<b>Кидай скриншот выполненного задания и награда твоя</b>"
 		return response
 	
+	def give_task(self,message):
+		response = {}
+		t = {
+			"status" : "Given",
+			"task_id" : "1",
+			"link" : "https://suda/nado/pereyti",
+			"social_network" : "ChinChopa",
+			"action" : "Поцелуй свою маму",
+			"reward" : 777.777,
+			"comment" : "Не надо ниче писать!!!",
+		}
+		user_t = UserTask.objects.create(status = t["status"],
+			task_id = t["task_id"],
+			link = t["link"],
+			social_network = t["social_network"],
+			action = t["action"],
+			reward = t["reward"],
+			comment = t["comment"])
+		self.user_info.user_task = user_t
+		self.user_info.save()
+
+		if user_t.status == "No tasks":
+			response["text"] = get_message("no_task_message")
+		else:
+			response["text"] = get_message("task_message", t)
+
+		response["menu"] = get_menu("task_menu")
+		return response
+
 	def pay(self):
 		self.user_info.pocket += 10
 		self.user_info.save()
@@ -75,11 +110,11 @@ class TelegramCommand():
 
 @bot.message_handler(commands=['start'])
 def greetings(message):
-	user_ID = User_info.objects.filter(chat_id = str(message.chat.id))
+	user_ID = Userinfo.objects.filter(chat_id = str(message.chat.id))
 	if len(user_ID) == 0:
 		bot.send_message(message.chat.id, "Здарова")
 		user = User.objects.create_user(username = "p" + str(message.chat.id), password = None)
-		user_info = User_info.objects.create(user = user,
+		user_info = Userinfo.objects.create(user = user,
 			chat_id = message.from_user.id,
 			current_command = "",
 			pocket = 0)
@@ -141,22 +176,15 @@ def get_screen(message):
 		bot.send_message(message.chat.id, "Чувак, сначала введи /start !")
 		return
 
-	user_info = User_info.objects.get(user = u)
+	user_info = Userinfo.objects.get(user = u)
 	if user_info.current_command == "process_get_screen":
 		user_info.current_command = ""
+		user_info.user_task.status = "Done"
 		user_info.save()
 		file_info = bot.get_file(message.photo[0].file_id)
 		downloaded_file = bot.download_file(file_info.file_path)
-		stream = BytesIO(downloaded_file)
-		im = Image.open(stream)
-		img = User_Image.objects.create(screenshot = im,
-			user_i = user_info)
-		bot.send_message(message.chat.id, im)
-		#user_info.screenshot = bot.download_file(file_info_1.file_path)
-		#src = ""
-		#bot.send_message(message.chat.id, src)
-		#with open(src, 'wb') as new_file:
-		#	new_file.write(downloaded_file)
+		im = ImageFile(BytesIO(downloaded_file), name = user_info.chat_id + '.jpg')
+		img = UserImage.objects.create(userI = user_info, screenshot = im)
 
 	else:
-		bot.send_message(message.chat.id, "Чувак, зачем мне твой скрин? Нажми на кнопку <b> Задание выполнено </b> и только потом присылай подтверждение!")
+		bot.send_message(message.chat.id, "Чувак, зачем мне твой скрин? Нажми на кнопку"+"<b> Задание выполнено </b>" + "и только потом присылай подтверждение!")

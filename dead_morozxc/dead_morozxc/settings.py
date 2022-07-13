@@ -81,8 +81,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'telebotio',
-        'USER': 'student',
+        'NAME': 'payerdb',
+        'USER': 'payer',
         'PASSWORD': 'safepsw20!',
         'HOST': '127.0.0.1',
         'PORT': '5432',
