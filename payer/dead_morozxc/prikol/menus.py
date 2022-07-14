@@ -15,6 +15,13 @@ def f3(extra_info, lang_code):
 	
 	return item[lang_code]
 
+def f4(extra_info, lang_code):
+	item = {
+		"ru" : ["Получить награду"],
+		"en" : ["Get reward"]
+	}
+	return item[lang_code]
+
 def get_menu(title,lang_code, extra_info = False):
 	menus_list = [
 		{"title" : "main_menu",
@@ -22,7 +29,9 @@ def get_menu(title,lang_code, extra_info = False):
 		{"title" : "task_menu",
 		"function" : f2},
 		{"title" : "language_menu",
-		"function" : f3}
+		"function" : f3},
+		{"title" : "reward_menu",
+		"function" : f4},
 	]
 
 	for m in menus_list:

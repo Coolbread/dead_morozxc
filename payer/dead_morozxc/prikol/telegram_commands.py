@@ -25,6 +25,8 @@ class TelegramCommand():
 		commands_list = [
 		#{"text" : "Получить новое задание", "function" : },
 		{"ru" : "Wait for language", "en" : "Wait for language", "function" : self.process_language},
+		{"ru" : "process_get_screen", "en" : "process_get_screen", "function" : self.process_get_screen},
+		{"ru" : "Получить награду", "en" : "Get reward", "function" : self.pay},
 		{"ru" : "Задание выполнено", "en" : "Job is done" , "function" : self.get_screen},
 		{"ru" : "/start", "en" : "/start", "function" : self.greetings},
 		{"ru" : "/main_menu","en" : "/main_menu", "function" : self.greetings},
@@ -45,6 +47,10 @@ class TelegramCommand():
 			return
 
 		self.user_info = Userinfo.objects.get(user = self.u)
+		try:
+			self.user_task = UserTask.objects.get(userI = self.user_info, status = "Given")
+		except:
+			self.user_task = None
 		self.message = message
 		self.lang_code = self.user_info.lang_code
 		self.content = message.text
@@ -98,38 +104,63 @@ class TelegramCommand():
 			response["text"] = "<b>Send a screenshot of the completed task and the reward is yours</b>"
 		return response
 	
-	def give_task(self,message):
+	def process_get_screen(self, message):
 		response = {}
-		t = {
-			"status" : "Given",
-			"task_id" : "1",
-			"link" : "https://suda/nado/pereyti",
-			"social_network" : "ChinChopa",
-			"action" : "Поцелуй свою маму",
-			"reward" : 777.777,
-			"comment" : "Не надо ниче писать!!!",
-		}
-		user_t = UserTask.objects.create(status = t["status"],
-			task_id = t["task_id"],
-			link = t["link"],
-			social_network = t["social_network"],
-			action = t["action"],
-			reward = t["reward"],
-			comment = t["comment"],
-			userI = self.user_info)
-
-		if user_t.status == "No tasks":
-			response["text"] = get_message("no_task_message", self.lang_code)
-		else:
-			response["text"] = get_message("task_message", self.lang_code, t)
-
-		response["menu"] = get_menu("task_menu", self.lang_code)
+		file_info = bot.get_file(message.photo[0].file_id)
+		downloaded_file = bot.download_file(file_info.file_path)
+		im = ImageFile(BytesIO(downloaded_file), name = self.user_info.chat_id + '.jpg')
+		img = UserImage.objects.create(userI = self.user_info, screenshot = im)
+		self.user_info.current_command = ""
+		self.user_info.save()
+		response["text"] = "Походу, обязательно нужен текст сообщения..."
+		response["menu"] = get_menu("reward_menu", self.lang_code)
 		return response
 
-	def pay(self):
-		self.user_info.pocket += 10
-		self.user_info.save()
+	def give_task(self,message):
+		response = {}
+		if self.user_task == None:
+			t = {
+				"status" : "Given",
+				"task_id" : "1",
+				"link" : "https://suda/nado/pereyti",
+				"social_network" : "ChinChopa",
+				"action" : "Поцелуй свою маму",
+				"reward" : 777.777,
+				"comment" : "Не надо ниче писать!!!",
+			}
+			user_t = UserTask.objects.create(status = t["status"],
+				task_id = t["task_id"],
+				link = t["link"],
+				social_network = t["social_network"],
+				action = t["action"],
+				reward = t["reward"],
+				comment = t["comment"],
+				userI = self.user_info)
 
+			if user_t.status == "No tasks":
+				response["text"] = get_message("no_task_message", self.lang_code)
+			else:
+				response["text"] = get_message("task_message", self.lang_code, t)
+
+			response["menu"] = get_menu("task_menu", self.lang_code)
+		else:
+			response["menu"] = get_menu("task_menu", self.lang_code)
+			response["text"] = get_message("hula_hoop_message",self.lang_code)
+		return response
+
+	def pay(self,message):
+		response = {}
+		self.user_task.status = "Done"
+		self.user_task.save()
+		r = {"balance" : self.user_info.pocket,
+		"reward" : self.user_task.reward,
+		"new_balance" : self.user_info.pocket + self.user_task.reward
+		}
+		self.user_info.pocket += self.user_task.reward
+		self.user_info.save()
+		response["text"] = get_message("reward_message", self.lang_code, r)
+		response["menu"] = get_menu("main_menu", self.lang_code)
+		return response
 
 
 @bot.message_handler(commands=['start'])
@@ -171,7 +202,7 @@ def greetings(message):
 		disable_web_page_preview = disable_web_preview)
 
 
-@bot.message_handler(content_types=["text"])
+@bot.message_handler(content_types=["text","photo"])
 def procces_message(message):
 	command = TelegramCommand(message)
 	response = command.execute()
@@ -196,23 +227,3 @@ def procces_message(message):
 	parse_mode = parse_mode,
 	disable_web_page_preview = disable_web_preview)
 
-@bot.message_handler(content_types=["photo"])
-def get_screen(message):
-	try:
-		u = User.objects.get(username = "p" + str(message.chat.id))
-	except:
-		bot.send_message(message.chat.id, "Чувак, сначала введи /start !")
-		return
-
-	user_info = Userinfo.objects.get(user = u)
-	if user_info.current_command == "process_get_screen":
-		user_info.current_command = ""
-		user_info.user_task.status = "Done"
-		user_info.save()
-		file_info = bot.get_file(message.photo[0].file_id)
-		downloaded_file = bot.download_file(file_info.file_path)
-		im = ImageFile(BytesIO(downloaded_file), name = user_info.chat_id + '.jpg')
-		img = UserImage.objects.create(userI = user_info, screenshot = im)
-
-	else:
-		bot.send_message(message.chat.id, "Чувак, зачем мне твой скрин? Нажми на кнопку"+"<b> Задание выполнено </b>" + "и только потом присылай подтверждение!")
