@@ -112,7 +112,9 @@ class TelegramCommand():
 		img = UserImage.objects.create(userI = self.user_info, screenshot = im)
 		self.user_info.current_command = ""
 		self.user_info.save()
-		response["text"] = "Походу, обязательно нужен текст сообщения..."
+		self.user_task.userImage = img
+		self.user_task.save()
+		response["text"] = get_message("get_reward_message", self.lang_code)
 		response["menu"] = get_menu("reward_menu", self.lang_code)
 		return response
 
@@ -139,10 +141,11 @@ class TelegramCommand():
 
 			if user_t.status == "No tasks":
 				response["text"] = get_message("no_task_message", self.lang_code)
+				response["menu"] = get_menu("main_menu", self.lang_code)
 			else:
 				response["text"] = get_message("task_message", self.lang_code, t)
+				response["menu"] = get_menu("task_menu", self.lang_code)
 
-			response["menu"] = get_menu("task_menu", self.lang_code)
 		else:
 			response["menu"] = get_menu("task_menu", self.lang_code)
 			response["text"] = get_message("hula_hoop_message",self.lang_code)
@@ -150,15 +153,18 @@ class TelegramCommand():
 
 	def pay(self,message):
 		response = {}
-		self.user_task.status = "Done"
-		self.user_task.save()
-		r = {"balance" : self.user_info.pocket,
-		"reward" : self.user_task.reward,
-		"new_balance" : self.user_info.pocket + self.user_task.reward
-		}
-		self.user_info.pocket += self.user_task.reward
-		self.user_info.save()
-		response["text"] = get_message("reward_message", self.lang_code, r)
+		if self.user_info.force_check == False:
+			self.user_task.status = "Done"
+			self.user_task.save()
+			r = {"balance" : self.user_info.pocket,
+			"reward" : self.user_task.reward,
+			"new_balance" : self.user_info.pocket + self.user_task.reward
+			}
+			self.user_info.pocket += self.user_task.reward
+			self.user_info.save()
+			response["text"] = get_message("reward_message", self.lang_code, r)
+		else:
+			response["text"] = get_message("waiting_message", self.lang_code)
 		response["menu"] = get_menu("main_menu", self.lang_code)
 		return response
 
@@ -167,11 +173,13 @@ class TelegramCommand():
 def greetings(message):
 	user_ID = Userinfo.objects.filter(chat_id = str(message.chat.id))
 	if len(user_ID) == 0:
-		keyboard = types.ReplyKeyboardMarkup(row_width = 2, one_time_keyboard = True)
-		btn1 = types.KeyboardButton('Русский')
-		btn2 = types.KeyboardButton('English')
-		keyboard.add(btn1, btn2)
-		bot.send_message(message.chat.id, "Здарова", reply_markup = keyboard)
+		response = {}
+		response["menu"] = get_menu("language_menu", "en")
+		response["text"] = get_message("language_message", "en")
+		keyboard = telebot.types.ReplyKeyboardMarkup()
+		for m in response["menu"]:
+			keyboard.row(*m)
+		bot.send_message(message.chat.id, response["text"], reply_markup = keyboard)
 		user = User.objects.create_user(username = "p" + str(message.chat.id), password = None)
 		user_info = Userinfo.objects.create(user = user,
 			chat_id = message.from_user.id,

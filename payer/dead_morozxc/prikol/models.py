@@ -13,6 +13,7 @@ class Userinfo(models.Model):
 	pocket = models.FloatField(blank = True, null = True, default = None)
 	create_date = models.DateTimeField(default=timezone.now)
 	lang_code = models.CharField(max_length = 2, default=None,blank = True, null = True)
+	force_check = models.BooleanField(default = False ,blank = True)
 
 
 class UserImage(models.Model):
@@ -22,6 +23,7 @@ class UserImage(models.Model):
 
 class UserTask(models.Model):
 	userI = models.ForeignKey("Userinfo", default=None, null = True, blank=True, on_delete = models.SET_DEFAULT)
+	userImage = models.OneToOneField("UserImage", default=None, null = True, blank=True, on_delete = models.SET_DEFAULT)
 	status = models.CharField(max_length = 15, default=None, blank = True, null = True)
 	task_id = models.CharField(max_length = 255, default=None, blank = True, null = True)
 	link = models.CharField(max_length = 255, default=None, blank = True, null = True)

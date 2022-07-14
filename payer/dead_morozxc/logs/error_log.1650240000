@@ -5192,3 +5192,113 @@ NameError: name 'TypeError' is not defined
 [Thu Jul 14 08:40:22.583030 2022] [wsgi:error] [pid 134064:tid 140690711643904] [remote 209.141.51.222:44186] Not Found: /favicon.ico
 [Thu Jul 14 08:40:30.063788 2022] [wsgi:error] [pid 134064:tid 140690703251200] [remote 8.26.182.26:23114] Not Found: /
 [Thu Jul 14 08:40:30.560681 2022] [wsgi:error] [pid 134064:tid 140690711643904] [remote 8.26.182.26:23114] Not Found: /favicon.ico
+[Thu Jul 14 08:55:02.817421 2022] [wsgi:error] [pid 134064:tid 140690703251200] [remote 51.254.49.101:57047] Not Found: /
+[Thu Jul 14 09:11:40.240397 2022] [wsgi:error] [pid 134064:tid 140690711643904] [remote 20.106.219.40:51775] Not Found: /.env
+[Thu Jul 14 09:11:40.628586 2022] [wsgi:error] [pid 134064:tid 140690703251200] [remote 20.106.219.40:51883] Not Found: /
+[Thu Jul 14 09:11:44.216008 2022] [wsgi:error] [pid 134064:tid 140690711643904] [remote 20.106.219.40:52819] Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[Thu Jul 14 09:26:52.590314 2022] [wsgi:error] [pid 134064:tid 140690703251200] [remote 192.241.213.19:52326] Not Found: /owa/auth/x.js
+[Thu Jul 14 09:28:46.983002 2022] [wsgi:error] [pid 134064:tid 140690711643904] [remote 192.241.220.215:52240] Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+[Thu Jul 14 09:29:51.056762 2022] [wsgi:error] [pid 134064:tid 140690703251200] [remote 192.241.221.43:37802] Not Found: /owa/auth/logon.aspx
+[Thu Jul 14 10:18:06.768547 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900] Traceback (most recent call last):
+[Thu Jul 14 10:18:06.769193 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]   File "/root/payer/dead_morozxc/prikol/views.py", line 17, in webhook
+[Thu Jul 14 10:18:06.769240 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]     bot.process_new_updates([update])
+[Thu Jul 14 10:18:06.769314 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 459, in process_new_updates
+[Thu Jul 14 10:18:06.769344 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]     self.process_new_messages(new_messages)
+[Thu Jul 14 10:18:06.769411 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 489, in process_new_messages
+[Thu Jul 14 10:18:06.769437 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]     self._notify_command_handlers(self.message_handlers, new_messages)
+[Thu Jul 14 10:18:06.769501 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 3069, in _notify_command_handlers
+[Thu Jul 14 10:18:06.769528 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]     self._exec_task(message_handler['function'], message)
+[Thu Jul 14 10:18:06.769586 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 738, in _exec_task
+[Thu Jul 14 10:18:06.769612 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]     task(*args, **kwargs)
+[Thu Jul 14 10:18:06.769668 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 226, in procces_message
+[Thu Jul 14 10:18:06.769695 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900]     response["text"],
+[Thu Jul 14 10:18:06.769804 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900] KeyError: 'text'
+[Thu Jul 14 10:18:06.769881 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900] 'text'
+[Thu Jul 14 10:18:06.769923 2022] [wsgi:error] [pid 135299:tid 140336867772160] [remote 91.108.6.111:59900] 
+[Thu Jul 14 10:38:44.281352 2022] [wsgi:error] [pid 136029:tid 139851607963392] [remote 88.214.43.118:57020] Not Found: /.env.credentials
+[Thu Jul 14 10:45:18.320930 2022] [wsgi:error] [pid 136029:tid 139851599570688] [remote 20.253.232.141:61839] Not Found: /
+[Thu Jul 14 10:45:19.870700 2022] [wsgi:error] [pid 136029:tid 139851607963392] [remote 20.253.232.141:57402] Not Found: /_profiler/empty/search/results
+[Thu Jul 14 10:53:57.797245 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336] Traceback (most recent call last):
+[Thu Jul 14 10:53:57.797676 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/payer/dead_morozxc/prikol/views.py", line 17, in webhook
+[Thu Jul 14 10:53:57.797709 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     bot.process_new_updates([update])
+[Thu Jul 14 10:53:57.797756 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 459, in process_new_updates
+[Thu Jul 14 10:53:57.797791 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     self.process_new_messages(new_messages)
+[Thu Jul 14 10:53:57.797837 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 489, in process_new_messages
+[Thu Jul 14 10:53:57.797855 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     self._notify_command_handlers(self.message_handlers, new_messages)
+[Thu Jul 14 10:53:57.797898 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 3069, in _notify_command_handlers
+[Thu Jul 14 10:53:57.797915 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     self._exec_task(message_handler['function'], message)
+[Thu Jul 14 10:53:57.797954 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 738, in _exec_task
+[Thu Jul 14 10:53:57.797971 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     task(*args, **kwargs)
+[Thu Jul 14 10:53:57.798009 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 216, in procces_message
+[Thu Jul 14 10:53:57.798026 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     response = command.execute()
+[Thu Jul 14 10:53:57.798064 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 67, in execute
+[Thu Jul 14 10:53:57.798081 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     r = self.command["function"](self.message)
+[Thu Jul 14 10:53:57.798119 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 115, in process_get_screen
+[Thu Jul 14 10:53:57.798136 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     self.user_task.userImage = img
+[Thu Jul 14 10:53:57.798177 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 310, in __set__
+[Thu Jul 14 10:53:57.798194 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     super().__set__(instance, value)
+[Thu Jul 14 10:53:57.798234 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 215, in __set__
+[Thu Jul 14 10:53:57.798252 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336]     raise ValueError(
+[Thu Jul 14 10:53:57.798318 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336] ValueError: Cannot assign "<UserImage: UserImage object (22)>": "UserTask.userImage" must be a "UserTask" instance.
+[Thu Jul 14 10:53:57.798378 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336] Cannot assign "<UserImage: UserImage object (22)>": "UserTask.userImage" must be a "UserTask" instance.
+[Thu Jul 14 10:53:57.798407 2022] [wsgi:error] [pid 137143:tid 139653818607360] [remote 91.108.6.111:35336] 
+[Thu Jul 14 11:17:23.940446 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600] Traceback (most recent call last):
+[Thu Jul 14 11:17:23.940869 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]   File "/root/payer/dead_morozxc/prikol/views.py", line 17, in webhook
+[Thu Jul 14 11:17:23.940905 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]     bot.process_new_updates([update])
+[Thu Jul 14 11:17:23.940970 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 459, in process_new_updates
+[Thu Jul 14 11:17:23.940981 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]     self.process_new_messages(new_messages)
+[Thu Jul 14 11:17:23.941006 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 489, in process_new_messages
+[Thu Jul 14 11:17:23.941015 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]     self._notify_command_handlers(self.message_handlers, new_messages)
+[Thu Jul 14 11:17:23.941038 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 3069, in _notify_command_handlers
+[Thu Jul 14 11:17:23.941048 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]     self._exec_task(message_handler['function'], message)
+[Thu Jul 14 11:17:23.941069 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 738, in _exec_task
+[Thu Jul 14 11:17:23.941078 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]     task(*args, **kwargs)
+[Thu Jul 14 11:17:23.941098 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 216, in procces_message
+[Thu Jul 14 11:17:23.941108 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]     response = command.execute()
+[Thu Jul 14 11:17:23.941128 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 67, in execute
+[Thu Jul 14 11:17:23.941138 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]     r = self.command["function"](self.message)
+[Thu Jul 14 11:17:23.941158 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 156, in pay
+[Thu Jul 14 11:17:23.941167 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600]     if user_info.force_check == True:
+[Thu Jul 14 11:17:23.941203 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600] NameError: name 'user_info' is not defined
+[Thu Jul 14 11:17:23.941245 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600] name 'user_info' is not defined
+[Thu Jul 14 11:17:23.941261 2022] [wsgi:error] [pid 137770:tid 139651485206272] [remote 91.108.6.111:55600] 
+[Thu Jul 14 11:18:59.569076 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180] Traceback (most recent call last):
+[Thu Jul 14 11:18:59.569335 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]   File "/root/payer/dead_morozxc/prikol/views.py", line 17, in webhook
+[Thu Jul 14 11:18:59.569351 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]     bot.process_new_updates([update])
+[Thu Jul 14 11:18:59.569390 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 459, in process_new_updates
+[Thu Jul 14 11:18:59.569402 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]     self.process_new_messages(new_messages)
+[Thu Jul 14 11:18:59.569426 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 489, in process_new_messages
+[Thu Jul 14 11:18:59.569436 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]     self._notify_command_handlers(self.message_handlers, new_messages)
+[Thu Jul 14 11:18:59.569472 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 3069, in _notify_command_handlers
+[Thu Jul 14 11:18:59.569482 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]     self._exec_task(message_handler['function'], message)
+[Thu Jul 14 11:18:59.569503 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 738, in _exec_task
+[Thu Jul 14 11:18:59.569512 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]     task(*args, **kwargs)
+[Thu Jul 14 11:18:59.569532 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 216, in procces_message
+[Thu Jul 14 11:18:59.569542 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]     response = command.execute()
+[Thu Jul 14 11:18:59.569562 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 67, in execute
+[Thu Jul 14 11:18:59.569572 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]     r = self.command["function"](self.message)
+[Thu Jul 14 11:18:59.569593 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 167, in pay
+[Thu Jul 14 11:18:59.569603 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180]     response["text"] = get_message("waiting_message", self.lang_code, r)
+[Thu Jul 14 11:18:59.569640 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180] UnboundLocalError: local variable 'r' referenced before assignment
+[Thu Jul 14 11:18:59.569673 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180] local variable 'r' referenced before assignment
+[Thu Jul 14 11:18:59.569689 2022] [wsgi:error] [pid 137997:tid 140510631216896] [remote 91.108.6.111:50180] 
+[Thu Jul 14 11:18:59.611161 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420] Traceback (most recent call last):
+[Thu Jul 14 11:18:59.611274 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]   File "/root/payer/dead_morozxc/prikol/views.py", line 17, in webhook
+[Thu Jul 14 11:18:59.611287 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]     bot.process_new_updates([update])
+[Thu Jul 14 11:18:59.611311 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 459, in process_new_updates
+[Thu Jul 14 11:18:59.611321 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]     self.process_new_messages(new_messages)
+[Thu Jul 14 11:18:59.611344 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 489, in process_new_messages
+[Thu Jul 14 11:18:59.611353 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]     self._notify_command_handlers(self.message_handlers, new_messages)
+[Thu Jul 14 11:18:59.611376 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 3069, in _notify_command_handlers
+[Thu Jul 14 11:18:59.611385 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]     self._exec_task(message_handler['function'], message)
+[Thu Jul 14 11:18:59.611406 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 738, in _exec_task
+[Thu Jul 14 11:18:59.611428 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]     task(*args, **kwargs)
+[Thu Jul 14 11:18:59.611450 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 216, in procces_message
+[Thu Jul 14 11:18:59.611459 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]     response = command.execute()
+[Thu Jul 14 11:18:59.611480 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 67, in execute
+[Thu Jul 14 11:18:59.611489 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]     r = self.command["function"](self.message)
+[Thu Jul 14 11:18:59.611510 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 167, in pay
+[Thu Jul 14 11:18:59.611519 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420]     response["text"] = get_message("waiting_message", self.lang_code, r)
+[Thu Jul 14 11:18:59.611547 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420] UnboundLocalError: local variable 'r' referenced before assignment
+[Thu Jul 14 11:18:59.611572 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420] local variable 'r' referenced before assignment
+[Thu Jul 14 11:18:59.611588 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420] 

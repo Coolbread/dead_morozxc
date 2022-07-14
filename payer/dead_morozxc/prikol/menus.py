@@ -10,15 +10,15 @@ def f2(extra_info,lang_code):
 
 def f3(extra_info, lang_code):
 	item = {
-		"en" : ["English", "Русский"]
+		"en" : [["English", "Русский"]]
 	}
 	
 	return item[lang_code]
 
 def f4(extra_info, lang_code):
 	item = {
-		"ru" : ["Получить награду"],
-		"en" : ["Get reward"]
+		"ru" : [["Получить награду"]],
+		"en" : [["Get reward"]]
 	}
 	return item[lang_code]
 

@@ -24,6 +24,20 @@ def f4(extra_info,lang_code):
 			"en" : "You already have a task!"}
 	return item[lang_code]
 
+def f5(extra_info,lang_code):
+	item = {"en" : "Choose your language"}
+	return item[lang_code]
+
+def f6(extra_info,lang_code):
+	item = {"ru" : "<b>Получи награду!!!</b>",
+			"en" : "<b>Get your reward!!!</b>"}
+	return item[lang_code]
+
+def f7(extra_info,lang_code):
+	item = {"ru" : "Подожди пока администрация проверит твой скриншот",
+			"en" : "Wait until the administration checks your screenshot"}
+	return item[lang_code]
+
 def get_message(title, lang_code, extra_info = False):
 	message_list = [
 		{"title" : "task_message",
@@ -34,6 +48,12 @@ def get_message(title, lang_code, extra_info = False):
 		"function" : f3},
 		{"title" : "hula_hoop_message",
 		"function" : f4},
+		{"title" : "language_message",
+		"function" : f5},
+		{"title" : "get_reward_message",
+		"function" : f6},
+		{"title" : "waiting_message",
+		"function" : f7}
 	]
 	
 	for m in message_list:
