@@ -38,6 +38,18 @@ def f7(extra_info,lang_code):
 			"en" : "Wait until the administration checks your screenshot"}
 	return item[lang_code]
 
+def f8(extra_info,lang_code):
+	item = {"ru" : "Количество выполненных тобой заданий - " + str(extra_info["count_tasks"]) + "\n" +\
+				   "Твой баланс - " + str(extra_info["balance"]),
+			"en" : "The number of tasks you have completed - " + str(extra_info["count_tasks"]) + "\n" +\
+				   "Your balance - " + str(extra_info["balance"])}
+	return item[lang_code]
+
+def f9(extra_info, lang_code):
+	item = {"ru" : "Вы успешно отменили задание",
+			"en" : "You have successfully skipped the task"}
+	return item[lang_code]
+
 def get_message(title, lang_code, extra_info = False):
 	message_list = [
 		{"title" : "task_message",
@@ -53,7 +65,11 @@ def get_message(title, lang_code, extra_info = False):
 		{"title" : "get_reward_message",
 		"function" : f6},
 		{"title" : "waiting_message",
-		"function" : f7}
+		"function" : f7},
+		{"title" : "profile_message",
+		"function" : f8},
+		{"title" : "skip_message",
+		"function" : f9}
 	]
 	
 	for m in message_list:

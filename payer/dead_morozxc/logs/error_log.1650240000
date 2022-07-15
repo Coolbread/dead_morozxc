@@ -5302,3 +5302,400 @@ NameError: name 'TypeError' is not defined
 [Thu Jul 14 11:18:59.611547 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420] UnboundLocalError: local variable 'r' referenced before assignment
 [Thu Jul 14 11:18:59.611572 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420] local variable 'r' referenced before assignment
 [Thu Jul 14 11:18:59.611588 2022] [wsgi:error] [pid 137997:tid 140510622824192] [remote 91.108.6.111:50420] 
+[Thu Jul 14 11:47:32.939678 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 185.180.143.5:50422] Not Found: /
+[Thu Jul 14 11:52:43.819684 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 216.218.206.69:34156] Not Found: /
+[Thu Jul 14 11:52:46.613785 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 128.14.134.134:54960] Not Found: /
+[Thu Jul 14 12:29:52.018161 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 139.162.215.70:58500] Not Found: /
+[Thu Jul 14 12:32:47.922377 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 157.55.39.54:11968] Not Found: /robots.txt
+[Thu Jul 14 12:32:53.339908 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 207.46.13.165:1920] Not Found: /
+[Thu Jul 14 12:59:02.824261 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 167.172.145.110:58132] Not Found: /
+[Thu Jul 14 13:03:36.057709 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 185.7.214.104:32850] Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[Thu Jul 14 13:13:06.777160 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 128.1.248.26:37110] Not Found: /
+[Thu Jul 14 13:41:39.248190 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 192.241.207.235:38280] Not Found: /version
+[Thu Jul 14 14:28:30.648171 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 185.7.214.104:60780] Not Found: /solr/admin/info/system
+[Thu Jul 14 14:41:28.950893 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 123.60.83.110:60799] Not Found: /
+[Thu Jul 14 15:11:28.560375 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 185.7.214.104:57292] Not Found: /index.php
+[Thu Jul 14 15:45:26.562508 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 185.180.143.11:47638] Not Found: /
+[Thu Jul 14 15:47:06.527761 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 185.7.214.104:60686] Not Found: /
+[Thu Jul 14 16:06:35.175340 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 154.89.5.74:61568] Not Found: /
+[Thu Jul 14 16:12:39.982384 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 185.7.214.104:55178] Not Found: /
+[Thu Jul 14 17:27:04.307576 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 185.7.214.104:45824] Not Found: /console/
+[Thu Jul 14 17:43:15.331986 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 185.7.214.104:53736] Not Found: /Autodiscover/Autodiscover.xml
+[Thu Jul 14 17:51:02.231813 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 103.203.57.10:34438] Not Found: /
+[Thu Jul 14 18:27:53.679115 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 20.253.232.141:60431] Not Found: /
+[Thu Jul 14 18:27:54.677366 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 20.253.232.141:58171] Not Found: /_profiler/empty/search/results
+[Thu Jul 14 18:42:03.506819 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 20.253.232.141:61990] Not Found: /
+[Thu Jul 14 18:42:04.446244 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 20.253.232.141:55078] Not Found: /_profiler/empty/search/results
+[Thu Jul 14 18:45:54.318784 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 185.7.214.104:41346] Not Found: /_ignition/execute-solution
+[Thu Jul 14 18:53:11.803244 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 94.102.61.10:43588] Not Found: /
+[Thu Jul 14 19:32:45.205766 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 185.7.214.104:48040] Not Found: /
+[Thu Jul 14 19:54:20.508967 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 92.255.85.38:33404] Not Found: /remote/fgt_lang
+[Thu Jul 14 20:06:36.921321 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 192.241.222.113:45080] Not Found: /actuator/health
+[Thu Jul 14 20:57:19.693411 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 193.46.255.26:61001] Not Found: /about_state
+[Thu Jul 14 21:02:24.629483 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 13.52.61.117:60032] Not Found: /
+[Thu Jul 14 21:20:12.981249 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 185.7.214.104:37924] Not Found: /actuator/gateway/routes
+[Thu Jul 14 22:17:34.730100 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 80.82.78.27:59472] Not Found: /remote/fgt_lang
+[Thu Jul 14 23:32:06.196049 2022] [wsgi:error] [pid 138367:tid 139726292018944] [remote 92.255.85.38:49560] Not Found: /remote/fgt_lang
+[Thu Jul 14 23:47:43.873285 2022] [wsgi:error] [pid 138367:tid 139726174521088] [remote 185.7.214.104:33398] Not Found: /
+Exception ignored in: <function BaseEventLoop.__del__ at 0x7f14883628b0>
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 654, in __del__
+NameError: name 'ResourceWarning' is not defined
+Exception ignored in: <function Local.__del__ at 0x7f14882d6040>
+Traceback (most recent call last):
+  File "/root/StudentBots/venv/lib/python3.8/site-packages/asgiref/local.py", line 96, in __del__
+NameError: name 'TypeError' is not defined
+[Fri Jul 15 00:20:58.939059 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 185.7.214.104:48836] Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[Fri Jul 15 00:39:56.284621 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 128.1.248.42:36496] Not Found: /
+[Fri Jul 15 01:14:22.861832 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 35.89.99.16:29440] Not Found: /
+[Fri Jul 15 01:14:24.751979 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 34.222.170.168:34470] Not Found: /
+[Fri Jul 15 01:22:26.901474 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 128.14.141.34:39898] Not Found: /
+[Fri Jul 15 01:29:07.749144 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 109.237.103.118:37640] Not Found: /.aws/credentials
+[Fri Jul 15 02:05:10.492857 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 192.241.213.83:33308] Not Found: /owa/auth/logon.aspx
+[Fri Jul 15 02:45:12.179882 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 192.241.220.212:57306] Not Found: /
+[Fri Jul 15 02:53:23.669101 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 185.7.214.104:47852] Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[Fri Jul 15 03:15:22.174862 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 185.7.214.104:54464] Not Found: /index.php
+[Fri Jul 15 03:24:54.872143 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 64.62.197.17:34962] Not Found: /
+[Fri Jul 15 04:05:03.832106 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 109.248.6.15:59770] Not Found: /
+[Fri Jul 15 04:16:07.163078 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 185.180.143.5:44822] Not Found: /
+[Fri Jul 15 04:22:44.031307 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 143.92.32.136:33936] Not Found: /
+[Fri Jul 15 04:28:06.770604 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 130.211.54.158:47602] Not Found: /
+[Fri Jul 15 05:57:16.421091 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /
+[Fri Jul 15 05:57:16.695016 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:16.968614 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /xmlrpc.php
+[Fri Jul 15 05:57:17.241874 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /
+[Fri Jul 15 05:57:17.519067 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /blog/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:17.796392 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /web/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:18.073598 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:18.351084 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /website/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:18.626337 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /wp/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:18.905058 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /news/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:19.189836 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /2018/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:19.468931 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /2019/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:19.752485 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /shop/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:20.052618 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /wp1/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:20.325333 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /test/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:20.632132 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /media/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:20.907817 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /wp2/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:21.189496 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /site/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:21.469129 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 159.223.63.89:59169] Not Found: /cms/wp-includes/wlwmanifest.xml
+[Fri Jul 15 05:57:21.747923 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 159.223.63.89:59169] Not Found: /sito/wp-includes/wlwmanifest.xml
+[Fri Jul 15 06:03:30.322470 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 185.142.236.41:57158] Not Found: /
+[Fri Jul 15 06:03:41.898300 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 185.142.236.41:38648] Not Found: /robots.txt
+[Fri Jul 15 06:03:42.180475 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 185.142.236.41:38812] Not Found: /sitemap.xml
+[Fri Jul 15 06:03:42.578346 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 185.142.236.41:39154] Not Found: /.well-known/security.txt
+[Fri Jul 15 06:03:45.077612 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 185.142.236.41:40794] Not Found: /favicon.ico
+[Fri Jul 15 06:40:40.003841 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 212.71.235.76:38642] Not Found: /
+[Fri Jul 15 07:09:45.650654 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 65.21.206.42:53272] Not Found: /
+[Fri Jul 15 07:13:03.803670 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 176.58.126.172:46872] Not Found: /
+[Fri Jul 15 07:24:00.756266 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 193.118.53.210:36008] Not Found: /
+[Fri Jul 15 07:33:36.941737 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 128.14.141.34:39292] Not Found: /
+[Fri Jul 15 07:37:30.633680 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 43.156.25.237:40136] Not Found: /
+[Fri Jul 15 07:52:20.734484 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 185.7.214.104:47138] Not Found: /mifs/.;/services/LogService
+[Fri Jul 15 08:34:55.169608 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 130.255.166.120:47087] Not Found: /robots.txt
+[Fri Jul 15 08:34:55.217810 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 130.255.166.90:28963] Not Found: /humans.txt
+[Fri Jul 15 08:34:55.298651 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 130.255.166.115:52159] Not Found: /ads.txt
+[Fri Jul 15 08:34:55.365095 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 130.255.166.69:43169] Not Found: /
+[Fri Jul 15 09:09:45.696995 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 128.1.248.26:59534] Not Found: /
+[Fri Jul 15 09:18:37.323089 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 192.241.221.43:39446] Not Found: /owa/auth/x.js
+[Fri Jul 15 09:21:30.130418 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 192.241.221.14:49390] Not Found: /ecp/Current/exporttool/microsoft.exchange.ediscovery.exporttool.application
+[Fri Jul 15 09:22:14.229168 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 192.241.213.19:50566] Not Found: /owa/auth/logon.aspx
+[Fri Jul 15 09:29:52.583128 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 143.92.32.136:49134] Not Found: /
+[Fri Jul 15 09:30:31.856471 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 221.2.163.231:58254] Not Found: /
+[Fri Jul 15 09:42:08.968423 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 65.49.20.66:59732] Not Found: /
+[Fri Jul 15 10:29:59.178644 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 213.32.122.82:32485] Not Found: /
+[Fri Jul 15 10:50:19.715646 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 167.172.73.108:52077] Not Found: /
+[Fri Jul 15 10:50:19.994190 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 167.172.73.108:52077] Not Found: /feed/
+[Fri Jul 15 10:50:20.303649 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 167.172.73.108:52077] Not Found: /xmlrpc.php
+[Fri Jul 15 10:50:20.607929 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 167.172.73.108:52077] Not Found: /blog/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:20.883154 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 167.172.73.108:52077] Not Found: /web/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:21.165792 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 167.172.73.108:52077] Not Found: /wordpress/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:21.456867 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 167.172.73.108:52077] Not Found: /wp/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:21.738993 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 167.172.73.108:52077] Not Found: /2020/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:22.024970 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 167.172.73.108:52077] Not Found: /2019/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:22.367661 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 167.172.73.108:52077] Not Found: /2021/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:22.654469 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 167.172.73.108:52077] Not Found: /shop/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:22.934795 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 167.172.73.108:52077] Not Found: /wp1/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:23.248472 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 167.172.73.108:52077] Not Found: /test/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:23.551993 2022] [wsgi:error] [pid 150332:tid 139726275233536] [remote 167.172.73.108:52077] Not Found: /site/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:50:23.832816 2022] [wsgi:error] [pid 150332:tid 139726174521088] [remote 167.172.73.108:52077] Not Found: /cms/wp-includes/wlwmanifest.xml
+[Fri Jul 15 10:52:52.420474 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776] Traceback (most recent call last):
+[Fri Jul 15 10:52:52.420967 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/payer/dead_morozxc/prikol/views.py", line 17, in webhook
+[Fri Jul 15 10:52:52.421017 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     bot.process_new_updates([update])
+[Fri Jul 15 10:52:52.421091 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 459, in process_new_updates
+[Fri Jul 15 10:52:52.421115 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     self.process_new_messages(new_messages)
+[Fri Jul 15 10:52:52.421253 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 489, in process_new_messages
+[Fri Jul 15 10:52:52.421276 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     self._notify_command_handlers(self.message_handlers, new_messages)
+[Fri Jul 15 10:52:52.421342 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 3069, in _notify_command_handlers
+[Fri Jul 15 10:52:52.421368 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     self._exec_task(message_handler['function'], message)
+[Fri Jul 15 10:52:52.421435 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 738, in _exec_task
+[Fri Jul 15 10:52:52.421460 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     task(*args, **kwargs)
+[Fri Jul 15 10:52:52.421528 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 251, in procces_message
+[Fri Jul 15 10:52:52.421551 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     bot.send_message(message.chat.id,
+[Fri Jul 15 10:52:52.421609 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 924, in send_message
+[Fri Jul 15 10:52:52.421632 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     apihelper.send_message(
+[Fri Jul 15 10:52:52.421685 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/apihelper.py", line 257, in send_message
+[Fri Jul 15 10:52:52.421703 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     return _make_request(token, method_url, params=payload, method='post')
+[Fri Jul 15 10:52:52.421741 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/apihelper.py", line 145, in _make_request
+[Fri Jul 15 10:52:52.421756 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     json_result = _check_result(method_name, result)
+[Fri Jul 15 10:52:52.421821 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/apihelper.py", line 172, in _check_result
+[Fri Jul 15 10:52:52.421844 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776]     raise ApiTelegramException(method_name, result, result_json)
+[Fri Jul 15 10:52:52.421909 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776] telebot.apihelper.ApiTelegramException: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+[Fri Jul 15 10:52:52.421997 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776] A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: message text is empty
+[Fri Jul 15 10:52:52.422050 2022] [wsgi:error] [pid 162029:tid 139909965084416] [remote 91.108.6.111:34776] 
+[Fri Jul 15 11:28:03.033387 2022] [wsgi:error] [pid 162546:tid 140267249178368] [remote 128.1.248.42:50722] Not Found: /
+[Fri Jul 15 11:40:15.654007 2022] [wsgi:error] [pid 162546:tid 140267274356480] [remote 198.235.24.128:51231] Not Found: /
+[Fri Jul 15 12:24:31.658154 2022] [wsgi:error] [pid 162546:tid 140267249178368] [remote 185.7.214.104:55062] Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[Fri Jul 15 12:30:36.493413 2022] [wsgi:error] [pid 162546:tid 140267274356480] [remote 92.118.160.29:54085] Not Found: /
+[Fri Jul 15 12:40:13.879417 2022] [wsgi:error] [pid 162546:tid 140267249178368] [remote 185.180.143.135:54872] Not Found: /
+[Fri Jul 15 12:48:40.737286 2022] [wsgi:error] [pid 162546:tid 140267274356480] [remote 205.185.122.184:23142] Not Found: /
+[Fri Jul 15 12:48:43.031480 2022] [wsgi:error] [pid 162546:tid 140267249178368] [remote 205.185.122.184:23142] Not Found: /favicon.ico
+[Fri Jul 15 13:26:41.026277 2022] [wsgi:error] [pid 162546:tid 140267274356480] [remote 185.7.214.104:44882] Not Found: /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[Fri Jul 15 13:44:44.982016 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874] Traceback (most recent call last):
+[Fri Jul 15 13:44:44.982394 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]   File "/root/payer/dead_morozxc/prikol/views.py", line 17, in webhook
+[Fri Jul 15 13:44:44.982416 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]     bot.process_new_updates([update])
+[Fri Jul 15 13:44:44.982455 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 459, in process_new_updates
+[Fri Jul 15 13:44:44.982473 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]     self.process_new_messages(new_messages)
+[Fri Jul 15 13:44:44.982528 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 489, in process_new_messages
+[Fri Jul 15 13:44:44.982546 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]     self._notify_command_handlers(self.message_handlers, new_messages)
+[Fri Jul 15 13:44:44.982576 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 3069, in _notify_command_handlers
+[Fri Jul 15 13:44:44.982588 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]     self._exec_task(message_handler['function'], message)
+[Fri Jul 15 13:44:44.982613 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]   File "/root/StudentBots/venv/lib/python3.8/site-packages/telebot/__init__.py", line 738, in _exec_task
+[Fri Jul 15 13:44:44.982624 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]     task(*args, **kwargs)
+[Fri Jul 15 13:44:44.982661 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 275, in procces_message
+[Fri Jul 15 13:44:44.982673 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]     response = command.execute()
+[Fri Jul 15 13:44:44.982711 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 71, in execute
+[Fri Jul 15 13:44:44.982725 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874]     r = self.command["function"](self.message)
+[Fri Jul 15 13:44:44.982766 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874] TypeError: 'NoneType' object is not subscriptable
+[Fri Jul 15 13:44:44.982803 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874] 'NoneType' object is not subscriptable
+[Fri Jul 15 13:44:44.982821 2022] [wsgi:error] [pid 165728:tid 140005678569216] [remote 91.108.6.111:38874] 
+[Fri Jul 15 13:48:52.306930 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006] Internal Server Error: /dead_morozxc/bot/process-new-updates/
+[Fri Jul 15 13:48:52.307103 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006] Traceback (most recent call last):
+[Fri Jul 15 13:48:52.307117 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Fri Jul 15 13:48:52.307127 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     response = get_response(request)
+[Fri Jul 15 13:48:52.307136 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+[Fri Jul 15 13:48:52.307145 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     callback, callback_args, callback_kwargs = self.resolve_request(request)
+[Fri Jul 15 13:48:52.307153 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+[Fri Jul 15 13:48:52.307162 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     resolver_match = resolver.resolve(request.path_info)
+[Fri Jul 15 13:48:52.307171 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+[Fri Jul 15 13:48:52.307195 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     for pattern in self.url_patterns:
+[Fri Jul 15 13:48:52.307206 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:48:52.307215 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:48:52.307223 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+[Fri Jul 15 13:48:52.307232 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Fri Jul 15 13:48:52.307240 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:48:52.307249 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:48:52.307275 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+[Fri Jul 15 13:48:52.307284 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     return import_module(self.urlconf_name)
+[Fri Jul 15 13:48:52.307293 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:48:52.307301 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:48:52.307309 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:48:52.307317 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:48:52.307325 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:48:52.307333 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:48:52.307341 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:48:52.307349 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:48:52.307357 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/payer/dead_morozxc/dead_morozxc/urls.py", line 8, in <module>
+[Fri Jul 15 13:48:52.307365 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     path('dead_morozxc/', include('prikol.urls')),
+[Fri Jul 15 13:48:52.307373 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+[Fri Jul 15 13:48:52.307381 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     urlconf_module = import_module(urlconf_module)
+[Fri Jul 15 13:48:52.307389 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:48:52.307398 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:48:52.307406 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:48:52.307414 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:48:52.307422 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:48:52.307430 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:48:52.307438 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:48:52.307446 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:48:52.307454 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/payer/dead_morozxc/prikol/urls.py", line 3, in <module>
+[Fri Jul 15 13:48:52.307466 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     from . import views
+[Fri Jul 15 13:48:52.307474 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/payer/dead_morozxc/prikol/views.py", line 5, in <module>
+[Fri Jul 15 13:48:52.307483 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     from .telegram_commands import bot
+[Fri Jul 15 13:48:52.307491 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 32
+[Fri Jul 15 13:48:52.307499 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     {"ru" : "\xd0\x9e\xd1\x82\xd0\xbc\xd0\xb5\xd0\xbd\xd0\xb8\xd1\x82\xd1\x8c \xd0\xb7\xd0\xb0\xd0\xb4\xd0\xb0\xd0\xbd\xd0\xb8\xd0\xb5", "en" : "Skip task", "function" : self.skip_task},
+[Fri Jul 15 13:48:52.307507 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006]     ^
+[Fri Jul 15 13:48:52.307515 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46006] SyntaxError: invalid syntax
+[Fri Jul 15 13:48:54.531597 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056] Internal Server Error: /dead_morozxc/bot/process-new-updates/
+[Fri Jul 15 13:48:54.531696 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056] Traceback (most recent call last):
+[Fri Jul 15 13:48:54.531708 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Fri Jul 15 13:48:54.531717 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     response = get_response(request)
+[Fri Jul 15 13:48:54.531725 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+[Fri Jul 15 13:48:54.531734 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     callback, callback_args, callback_kwargs = self.resolve_request(request)
+[Fri Jul 15 13:48:54.531742 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+[Fri Jul 15 13:48:54.531750 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     resolver_match = resolver.resolve(request.path_info)
+[Fri Jul 15 13:48:54.531758 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+[Fri Jul 15 13:48:54.531766 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     for pattern in self.url_patterns:
+[Fri Jul 15 13:48:54.531774 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:48:54.531782 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:48:54.531791 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+[Fri Jul 15 13:48:54.531801 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Fri Jul 15 13:48:54.531812 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:48:54.531838 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:48:54.531847 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+[Fri Jul 15 13:48:54.531855 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     return import_module(self.urlconf_name)
+[Fri Jul 15 13:48:54.531863 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:48:54.531871 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:48:54.531879 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:48:54.531887 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:48:54.531895 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:48:54.531903 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:48:54.531911 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:48:54.531919 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:48:54.531928 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/payer/dead_morozxc/dead_morozxc/urls.py", line 8, in <module>
+[Fri Jul 15 13:48:54.531936 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     path('dead_morozxc/', include('prikol.urls')),
+[Fri Jul 15 13:48:54.531944 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+[Fri Jul 15 13:48:54.531952 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     urlconf_module = import_module(urlconf_module)
+[Fri Jul 15 13:48:54.531960 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:48:54.531968 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:48:54.531976 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:48:54.531985 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:48:54.531993 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:48:54.532001 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:48:54.532009 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:48:54.532017 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:48:54.532036 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/payer/dead_morozxc/prikol/urls.py", line 3, in <module>
+[Fri Jul 15 13:48:54.532046 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     from . import views
+[Fri Jul 15 13:48:54.532054 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/payer/dead_morozxc/prikol/views.py", line 5, in <module>
+[Fri Jul 15 13:48:54.532065 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     from .telegram_commands import bot
+[Fri Jul 15 13:48:54.532076 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 32
+[Fri Jul 15 13:48:54.532086 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     {"ru" : "\xd0\x9e\xd1\x82\xd0\xbc\xd0\xb5\xd0\xbd\xd0\xb8\xd1\x82\xd1\x8c \xd0\xb7\xd0\xb0\xd0\xb4\xd0\xb0\xd0\xbd\xd0\xb8\xd0\xb5", "en" : "Skip task", "function" : self.skip_task},
+[Fri Jul 15 13:48:54.532098 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056]     ^
+[Fri Jul 15 13:48:54.532109 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:46056] SyntaxError: invalid syntax
+[Fri Jul 15 13:48:58.715870 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740] Internal Server Error: /dead_morozxc/bot/process-new-updates/
+[Fri Jul 15 13:48:58.715982 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740] Traceback (most recent call last):
+[Fri Jul 15 13:48:58.715993 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Fri Jul 15 13:48:58.716002 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     response = get_response(request)
+[Fri Jul 15 13:48:58.716010 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+[Fri Jul 15 13:48:58.716019 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     callback, callback_args, callback_kwargs = self.resolve_request(request)
+[Fri Jul 15 13:48:58.716027 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+[Fri Jul 15 13:48:58.716036 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     resolver_match = resolver.resolve(request.path_info)
+[Fri Jul 15 13:48:58.716044 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+[Fri Jul 15 13:48:58.716052 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     for pattern in self.url_patterns:
+[Fri Jul 15 13:48:58.716060 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:48:58.716068 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:48:58.716076 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+[Fri Jul 15 13:48:58.716084 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Fri Jul 15 13:48:58.716121 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:48:58.716130 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:48:58.716138 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+[Fri Jul 15 13:48:58.716147 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     return import_module(self.urlconf_name)
+[Fri Jul 15 13:48:58.716155 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:48:58.716163 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:48:58.716171 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:48:58.716179 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:48:58.716187 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:48:58.716195 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:48:58.716203 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:48:58.716211 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:48:58.716219 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/payer/dead_morozxc/dead_morozxc/urls.py", line 8, in <module>
+[Fri Jul 15 13:48:58.716227 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     path('dead_morozxc/', include('prikol.urls')),
+[Fri Jul 15 13:48:58.716235 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+[Fri Jul 15 13:48:58.716243 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     urlconf_module = import_module(urlconf_module)
+[Fri Jul 15 13:48:58.716251 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:48:58.716259 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:48:58.716267 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:48:58.716275 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:48:58.716283 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:48:58.716291 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:48:58.716299 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:48:58.716315 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:48:58.716324 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/payer/dead_morozxc/prikol/urls.py", line 3, in <module>
+[Fri Jul 15 13:48:58.716332 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     from . import views
+[Fri Jul 15 13:48:58.716340 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/payer/dead_morozxc/prikol/views.py", line 5, in <module>
+[Fri Jul 15 13:48:58.716348 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     from .telegram_commands import bot
+[Fri Jul 15 13:48:58.716356 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 32
+[Fri Jul 15 13:48:58.716364 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     {"ru" : "\xd0\x9e\xd1\x82\xd0\xbc\xd0\xb5\xd0\xbd\xd0\xb8\xd1\x82\xd1\x8c \xd0\xb7\xd0\xb0\xd0\xb4\xd0\xb0\xd0\xbd\xd0\xb8\xd0\xb5", "en" : "Skip task", "function" : self.skip_task},
+[Fri Jul 15 13:48:58.716373 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740]     ^
+[Fri Jul 15 13:48:58.716381 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:46740] SyntaxError: invalid syntax
+[Fri Jul 15 13:49:06.908423 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692] Internal Server Error: /dead_morozxc/bot/process-new-updates/
+[Fri Jul 15 13:49:06.908523 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692] Traceback (most recent call last):
+[Fri Jul 15 13:49:06.908536 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Fri Jul 15 13:49:06.908544 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     response = get_response(request)
+[Fri Jul 15 13:49:06.908553 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+[Fri Jul 15 13:49:06.908561 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     callback, callback_args, callback_kwargs = self.resolve_request(request)
+[Fri Jul 15 13:49:06.908569 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+[Fri Jul 15 13:49:06.908577 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     resolver_match = resolver.resolve(request.path_info)
+[Fri Jul 15 13:49:06.908585 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+[Fri Jul 15 13:49:06.908593 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     for pattern in self.url_patterns:
+[Fri Jul 15 13:49:06.908602 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:49:06.908610 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:49:06.908618 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+[Fri Jul 15 13:49:06.908639 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Fri Jul 15 13:49:06.908647 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:49:06.908656 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:49:06.908664 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+[Fri Jul 15 13:49:06.908672 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     return import_module(self.urlconf_name)
+[Fri Jul 15 13:49:06.908680 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:49:06.908688 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:49:06.908696 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:49:06.908704 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:49:06.908712 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:49:06.908720 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:49:06.908728 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:49:06.908736 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:49:06.908744 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/payer/dead_morozxc/dead_morozxc/urls.py", line 8, in <module>
+[Fri Jul 15 13:49:06.908752 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     path('dead_morozxc/', include('prikol.urls')),
+[Fri Jul 15 13:49:06.908760 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+[Fri Jul 15 13:49:06.908769 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     urlconf_module = import_module(urlconf_module)
+[Fri Jul 15 13:49:06.908793 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:49:06.908803 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:49:06.908811 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:49:06.908820 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:49:06.908828 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:49:06.908836 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:49:06.908848 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:49:06.908856 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:49:06.908864 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/payer/dead_morozxc/prikol/urls.py", line 3, in <module>
+[Fri Jul 15 13:49:06.908872 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     from . import views
+[Fri Jul 15 13:49:06.908880 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/payer/dead_morozxc/prikol/views.py", line 5, in <module>
+[Fri Jul 15 13:49:06.908888 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     from .telegram_commands import bot
+[Fri Jul 15 13:49:06.908896 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 32
+[Fri Jul 15 13:49:06.908904 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     {"ru" : "\xd0\x9e\xd1\x82\xd0\xbc\xd0\xb5\xd0\xbd\xd0\xb8\xd1\x82\xd1\x8c \xd0\xb7\xd0\xb0\xd0\xb4\xd0\xb0\xd0\xbd\xd0\xb8\xd0\xb5", "en" : "Skip task", "function" : self.skip_task},
+[Fri Jul 15 13:49:06.908913 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692]     ^
+[Fri Jul 15 13:49:06.908920 2022] [wsgi:error] [pid 166226:tid 139921007122176] [remote 91.108.6.111:47692] SyntaxError: invalid syntax
+[Fri Jul 15 13:49:23.091645 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604] Internal Server Error: /dead_morozxc/bot/process-new-updates/
+[Fri Jul 15 13:49:23.091729 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604] Traceback (most recent call last):
+[Fri Jul 15 13:49:23.091740 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+[Fri Jul 15 13:49:23.091749 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     response = get_response(request)
+[Fri Jul 15 13:49:23.091757 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 167, in _get_response
+[Fri Jul 15 13:49:23.091766 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     callback, callback_args, callback_kwargs = self.resolve_request(request)
+[Fri Jul 15 13:49:23.091774 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 290, in resolve_request
+[Fri Jul 15 13:49:23.091782 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     resolver_match = resolver.resolve(request.path_info)
+[Fri Jul 15 13:49:23.091790 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 556, in resolve
+[Fri Jul 15 13:49:23.091799 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     for pattern in self.url_patterns:
+[Fri Jul 15 13:49:23.091807 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:49:23.091815 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:49:23.091823 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 598, in url_patterns
+[Fri Jul 15 13:49:23.091843 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+[Fri Jul 15 13:49:23.091851 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+[Fri Jul 15 13:49:23.091859 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     res = instance.__dict__[self.name] = self.func(instance)
+[Fri Jul 15 13:49:23.091867 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/resolvers.py", line 591, in urlconf_module
+[Fri Jul 15 13:49:23.091876 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     return import_module(self.urlconf_name)
+[Fri Jul 15 13:49:23.091884 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:49:23.091892 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:49:23.091900 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:49:23.091907 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:49:23.091915 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:49:23.091923 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:49:23.091931 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:49:23.091939 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:49:23.091947 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/payer/dead_morozxc/dead_morozxc/urls.py", line 8, in <module>
+[Fri Jul 15 13:49:23.091955 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     path('dead_morozxc/', include('prikol.urls')),
+[Fri Jul 15 13:49:23.091964 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/StudentBots/venv/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include
+[Fri Jul 15 13:49:23.091972 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     urlconf_module = import_module(urlconf_module)
+[Fri Jul 15 13:49:23.091980 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/usr/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[Fri Jul 15 13:49:23.091988 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     return _bootstrap._gcd_import(name[level:], package, level)
+[Fri Jul 15 13:49:23.091996 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[Fri Jul 15 13:49:23.092004 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[Fri Jul 15 13:49:23.092012 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[Fri Jul 15 13:49:23.092023 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[Fri Jul 15 13:49:23.092031 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap_external>", line 848, in exec_module
+[Fri Jul 15 13:49:23.092039 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[Fri Jul 15 13:49:23.092047 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/payer/dead_morozxc/prikol/urls.py", line 3, in <module>
+[Fri Jul 15 13:49:23.092055 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     from . import views
+[Fri Jul 15 13:49:23.092063 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/payer/dead_morozxc/prikol/views.py", line 5, in <module>
+[Fri Jul 15 13:49:23.092071 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     from .telegram_commands import bot
+[Fri Jul 15 13:49:23.092079 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]   File "/root/payer/dead_morozxc/prikol/telegram_commands.py", line 32
+[Fri Jul 15 13:49:23.092090 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     {"ru" : "\xd0\x9e\xd1\x82\xd0\xbc\xd0\xb5\xd0\xbd\xd0\xb8\xd1\x82\xd1\x8c \xd0\xb7\xd0\xb0\xd0\xb4\xd0\xb0\xd0\xbd\xd0\xb8\xd0\xb5", "en" : "Skip task", "function" : self.skip_task},
+[Fri Jul 15 13:49:23.092102 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604]     ^
+[Fri Jul 15 13:49:23.092112 2022] [wsgi:error] [pid 166226:tid 139920990336768] [remote 91.108.6.111:49604] SyntaxError: invalid syntax

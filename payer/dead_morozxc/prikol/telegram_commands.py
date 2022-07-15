@@ -24,7 +24,12 @@ class TelegramCommand():
 	def get_command(self,command, lang_code):
 		commands_list = [
 		#{"text" : "Получить новое задание", "function" : },
+		{"ru" : "Назад", "en" : "Back", "function" : self.greetings},
 		{"ru" : "Wait for language", "en" : "Wait for language", "function" : self.process_language},
+		{"ru" : "Личный кабинет", "en" : "My profile", "function" : self.my_profile},
+		{"ru" : "Задания", "en" : "Tasks", "function" : self.tasks_f},
+		{"ru" : "Дай другое задание", "en" : "Give me another task", "function" : self.change_task},
+		{"ru" : "Отменить задание", "en" : "Skip task", "function" : self.skip_task},
 		{"ru" : "process_get_screen", "en" : "process_get_screen", "function" : self.process_get_screen},
 		{"ru" : "Получить награду", "en" : "Get reward", "function" : self.pay},
 		{"ru" : "Задание выполнено", "en" : "Job is done" , "function" : self.get_screen},
@@ -89,9 +94,30 @@ class TelegramCommand():
 		response = {}
 		response["menu"] = get_menu("main_menu", self.lang_code)
 		if self.lang_code == "ru":
+			response["text"] = "<b>Здарова!</b>"
+		else:
+			response["text"] = "<b>Hello!</b>"
+		return response
+
+	def my_profile(self,message):
+		response = {}
+		info = {
+			"count_tasks" : self.user_info.count_tasks,
+			"balance" : self.user_info.pocket
+		}
+		response["text"] = get_message("profile_message", self.lang_code, info)
+		return response
+
+	def tasks_f(self,message):
+		response = {}
+		if self.lang_code == "ru":
 			response["text"] = "<b>Пора выполнять задания!</b>"
 		else:
 			response["text"] = "<b>It's time to complete the tasks!</b>"
+		if self.user_task:
+			response["menu"] = get_menu("if_have_task_menu", self.lang_code)
+		else:
+			response["menu"] = get_menu("task_menu", self.lang_code)
 		return response
 
 	def get_screen(self,message):
@@ -120,16 +146,16 @@ class TelegramCommand():
 
 	def give_task(self,message):
 		response = {}
-		if self.user_task == None:
-			t = {
-				"status" : "Given",
-				"task_id" : "1",
-				"link" : "https://suda/nado/pereyti",
-				"social_network" : "ChinChopa",
-				"action" : "Поцелуй свою маму",
-				"reward" : 777.777,
-				"comment" : "Не надо ниче писать!!!",
-			}
+		t = {
+			"status" : "Given",
+			"task_id" : "1",
+			"link" : "https://suda/nado/pereyti",
+			"social_network" : "ChinChopa",
+			"action" : "Поцелуй свою маму",
+			"reward" : 777.777,
+			"comment" : "Не надо ниче писать!!!",
+		}
+		if t["status"] != "No tasks":			
 			user_t = UserTask.objects.create(status = t["status"],
 				task_id = t["task_id"],
 				link = t["link"],
@@ -138,18 +164,51 @@ class TelegramCommand():
 				reward = t["reward"],
 				comment = t["comment"],
 				userI = self.user_info)
-
-			if user_t.status == "No tasks":
-				response["text"] = get_message("no_task_message", self.lang_code)
-				response["menu"] = get_menu("main_menu", self.lang_code)
-			else:
-				response["text"] = get_message("task_message", self.lang_code, t)
-				response["menu"] = get_menu("task_menu", self.lang_code)
+			response["text"] = get_message("task_message", self.lang_code, t)
+			response["menu"] = get_menu("main_menu", self.lang_code)
 
 		else:
-			response["menu"] = get_menu("task_menu", self.lang_code)
-			response["text"] = get_message("hula_hoop_message",self.lang_code)
+			response["text"] = get_message("no_task_message", self.lang_code)
+			response["menu"] = get_menu("main_menu", self.lang_code)
 		return response
+
+	def skip_task(self,message):
+		response = {}
+		response["text"] = get_message("skip_message", self.lang_code)
+		self.user_task.status = "Skipped"
+		self.user_task.save()
+		response["menu"] = get_menu("main_menu", self.lang_code)
+		return response
+
+	def change_task(self,message):
+		response = {}
+		self.user_task.status = "Skipped"
+		self.user_task.save()
+		t = {
+			"status" : "Given",
+			"task_id" : "2",
+			"link" : "https://hell/lucifer/666",
+			"social_network" : "ChinChopa",
+			"action" : "Призыв дьявола",
+			"reward" : 666.666,
+			"comment" : "Надо Жить браза!!!",
+		}
+		if t["status"] != "No tasks":			
+			user_t = UserTask.objects.create(status = t["status"],
+				task_id = t["task_id"],
+				link = t["link"],
+				social_network = t["social_network"],
+				action = t["action"],
+				reward = t["reward"],
+				comment = t["comment"],
+				userI = self.user_info)
+			response["text"] = get_message("task_message", self.lang_code, t)
+			response["menu"] = get_menu("main_menu", self.lang_code)
+
+		else:
+			response["text"] = get_message("no_task_message", self.lang_code)
+			response["menu"] = get_menu("main_menu", self.lang_code)
+		return response		
 
 	def pay(self,message):
 		response = {}
@@ -161,6 +220,7 @@ class TelegramCommand():
 			"new_balance" : self.user_info.pocket + self.user_task.reward
 			}
 			self.user_info.pocket += self.user_task.reward
+			self.user_info.count_tasks += 1
 			self.user_info.save()
 			response["text"] = get_message("reward_message", self.lang_code, r)
 		else:

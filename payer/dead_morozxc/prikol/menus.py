@@ -1,11 +1,11 @@
 def f1(extra_info,lang_code):
-	item = {"ru" : [["Дай задание"],["Мой баланс"]],
-			"en" : [["Give me task"],["My balance"]]}
+	item = {"ru" : [["Задания"],["Личный кабинет"]],
+			"en" : [["Tasks"],["My profile"]]}
 	return item[lang_code]
 
 def f2(extra_info,lang_code):
-	item = {"ru" : [["Дай другое задание", "Задание выполнено"]],
-			"en" : [["Give me another task", "Job is done"]]}
+	item = {"ru" : [["Дай задание"],["Назад"]],
+			"en" : [["Give me task"],["Back"]]}
 	return item[lang_code]
 
 def f3(extra_info, lang_code):
@@ -22,6 +22,13 @@ def f4(extra_info, lang_code):
 	}
 	return item[lang_code]
 
+def f5(extra_info, lang_code):
+	item = {
+		"ru" : [["Дай другое задание", "Задание выполнено"],["Отменить задание","Назад"]],
+		"en" : [["Give me another task","Job is done"], ["Skip task","Back"]]
+	}
+	return item[lang_code]
+
 def get_menu(title,lang_code, extra_info = False):
 	menus_list = [
 		{"title" : "main_menu",
@@ -32,7 +39,9 @@ def get_menu(title,lang_code, extra_info = False):
 		"function" : f3},
 		{"title" : "reward_menu",
 		"function" : f4},
-	]
+		{"title" : "if_have_task_menu",
+		"function" : f5}
+	] 
 
 	for m in menus_list:
 		if m["title"] == title:
