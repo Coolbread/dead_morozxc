@@ -10,12 +10,14 @@ class Userinfo(models.Model):
 	user = models.OneToOneField(User, default=None, null = True, blank=True, on_delete = models.CASCADE)
 	chat_id = models.CharField(max_length = 255, default=None,blank = True, null = True)
 	current_command = models.CharField(max_length = 255, default=None,blank = True, null = True)
+	prev_func = models.CharField(max_length = 255, default=None,blank = True, null = True)
 	pocket = models.FloatField(blank = True, null = True, default = None)
 	count_tasks = models.IntegerField(blank = True, null = True, default = 0)
 	create_date = models.DateTimeField(default=timezone.now)
 	lang_code = models.CharField(max_length = 2, default=None,blank = True, null = True)
 	force_check = models.BooleanField(default = False ,blank = True)
-
+	pocket_id = models.CharField(max_length = 255, default=None,blank = True, null = True)
+	withdrawal_method = models.CharField(max_length = 32, default=None,blank = True, null = True)
 
 class UserImage(models.Model):
 	userI = models.ForeignKey("Userinfo", default=None, null = True, blank=True, on_delete = models.SET_DEFAULT)
@@ -38,3 +40,34 @@ class UserTask(models.Model):
 	comment_username = models.CharField(max_length = 255, default=None, blank = True, null = True)
 	comment = models.CharField(max_length = 255, default=None, blank = True, null = True)
 	create_date = models.DateTimeField(default=timezone.now)
+
+class WithdrawalMethods(models.Model):
+	name = models.CharField(max_length = 32)
+	min_withdrawal = models.IntegerField()
+	speed = models.CharField(max_length = 16)
+	regex = models.CharField(max_length = 256, blank = True, null = True, default = None)
+	example = models.CharField(max_length = 256, blank = True, null = True, default = None)
+	is_active = models.BooleanField(default = True)
+
+	def unicode(self):
+		return self.name + " " + str(self.min_withdrawal) + " " + self.speed
+
+class Withdrawal(models.Model):
+	user = models.ForeignKey(Userinfo, null = True, on_delete = models.SET_NULL)
+	method = models.ForeignKey(WithdrawalMethods, null = True, on_delete = models.SET_NULL)
+
+	outcome = models.FloatField(null = True, blank = True, default = None)
+	rub_outcome = models.FloatField(null = True, blank = True, default = None)
+	currency = models.CharField(max_length = 10, default = "USD")
+
+	creation_date = models.DateTimeField(default = timezone.now)
+	confirmation_date  = models.DateTimeField(null = True, blank = True, default = None)
+
+	status = models.CharField(max_length = 120, default = "New")
+	payment_method = models.CharField(max_length = 60, default = "Crypto")
+
+	wallet_info = models.CharField(max_length = 4096, null = True, blank = True, default = None)
+
+	payout_id = models.CharField(max_length = 128, null = True, blank = True, default = None)
+
+	is_take_into_account = models.BooleanField(default = False)

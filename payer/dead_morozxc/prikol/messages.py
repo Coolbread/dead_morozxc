@@ -50,6 +50,41 @@ def f9(extra_info, lang_code):
 			"en" : "You have successfully skipped the task"}
 	return item[lang_code]
 
+def f10(extra_info, lang_code):
+	item = {"ru" : "Выбирай способ вывода приколов",
+			"en" : "Choose the withdrawal method"}
+	return item[lang_code]
+
+def f11(extra_info,lang_code):
+	item = {"ru" : "Назад",
+			"en" : "Back"}
+	return item[lang_code]
+
+def f12(extra_info,lang_code):
+	item = {"ru" : "Введите id кошелька. Пример - " + extra_info,
+			"en" : "Enter your wallet id. Example - " + extra_info}
+	return item[lang_code]
+
+def f13(extra_info,lang_code):
+	item = {"ru" : "Хотите воспользоваться прошлым id кошелька - " + extra_info + " ?",
+			"en" : "Do you want to use the wallet's past id - " + extra_info + " ?"}
+	return item[lang_code]
+
+def f14(extra_info,lang_code):
+	item = {"ru" : "Недостаточно средств для вывода! Солнце еще высоко, выполняй задания и возвращайся! Минимальный вывод с " + str(extra_info) + " приколов.",
+			"en" : "Not enough funds to withdraw! The sun is still high, complete the tasks and come back! Minimum withdrawal from " + str(extra_info) + " prikols."}
+	return item[lang_code]
+
+def f15(extra_info,lang_code):
+	item = {"ru" : "Операция прошла успешно! С баланса списано - " + str(extra_info) + " приколов.",
+			"en" : "The operation was successful! Debited from the balance - " + str(extra_info) + " prikols."}
+	return item[lang_code]
+
+def f16(extra_info,lang_code):
+	item = {"ru" : "Неправильно введен id кошелька! Перепроверь!",
+			"en" : "The wallet ID was entered incorrectly! Double-check!"}
+	return item[lang_code]
+
 def get_message(title, lang_code, extra_info = False):
 	message_list = [
 		{"title" : "task_message",
@@ -69,7 +104,21 @@ def get_message(title, lang_code, extra_info = False):
 		{"title" : "profile_message",
 		"function" : f8},
 		{"title" : "skip_message",
-		"function" : f9}
+		"function" : f9},
+		{"title" : "output_message",
+		"function" : f10},
+		{"title" : "back_message",
+		"function" : f11},
+		{"title" : "get_wallet_id_message",
+		"function" : f12},
+		{"title" : "prev_wallet_id_message",
+		"function" : f13},
+		{"title" : "small_balance_message",
+		"function" : f14},
+		{"title" : "pay_message",
+		"function" : f15},
+		{"title" : "wrong_pattern_id_message",
+		"function" : f16}
 	]
 	
 	for m in message_list:

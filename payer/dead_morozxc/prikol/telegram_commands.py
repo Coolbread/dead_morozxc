@@ -4,6 +4,8 @@ from django.conf import settings
 from .models import Userinfo
 from .models import UserImage
 from .models import UserTask
+from .models import WithdrawalMethods
+from .models import Withdrawal
 from PIL import Image
 from io import BytesIO
 from django.core.files.images import ImageFile
@@ -11,6 +13,7 @@ from django.core.files.images import ImageFile
 from django.contrib.auth.models import User
 import psycopg2
 import time
+import re
 
 from .menus import get_menu
 from .messages import get_message
@@ -24,10 +27,9 @@ class TelegramCommand():
 	def get_command(self,command, lang_code):
 		commands_list = [
 		#{"text" : "Получить новое задание", "function" : },
-		{"ru" : "Назад", "en" : "Back", "function" : self.greetings},
 		{"ru" : "Wait for language", "en" : "Wait for language", "function" : self.process_language},
 		{"ru" : "Личный кабинет", "en" : "My profile", "function" : self.my_profile},
-		{"ru" : "Задания", "en" : "Tasks", "function" : self.tasks_f},
+		{"ru" : "Задания", "en" : "Tasks", "function" : self.tasks_f, "back_function" : "/main_menu"},
 		{"ru" : "Дай другое задание", "en" : "Give me another task", "function" : self.change_task},
 		{"ru" : "Отменить задание", "en" : "Skip task", "function" : self.skip_task},
 		{"ru" : "process_get_screen", "en" : "process_get_screen", "function" : self.process_get_screen},
@@ -36,6 +38,9 @@ class TelegramCommand():
 		{"ru" : "/start", "en" : "/start", "function" : self.greetings},
 		{"ru" : "/main_menu","en" : "/main_menu", "function" : self.greetings},
 		{"ru" : "Дай задание", "en" : "Give me task", "function" : self.give_task},
+		{"ru" : "Вывод средств", "en" : "Withdrawal of funds", "function" : self.give_output_menu, "back_function" : "/main_menu"},
+		{"ru" : "process_output", "en" : "process_output", "function" : self.process_output, "back_function" : "Withdrawal of funds"},
+		{"ru" : "process_input_wallet_id", "en" : "process_input_wallet_id", "function" : self.process_input_wallet_id, "back_function" : "Withdrawal of funds"},
 		]
 
 		for c in commands_list:
@@ -52,10 +57,17 @@ class TelegramCommand():
 			return
 
 		self.user_info = Userinfo.objects.get(user = self.u)
+		
 		try:
 			self.user_task = UserTask.objects.get(userI = self.user_info, status = "Given")
 		except:
 			self.user_task = None
+		
+		try:
+			self.method = WithdrawalMethods.objects.get(name = self.user_info.withdrawal_method)
+		except:
+			self.method = None
+		
 		self.message = message
 		self.lang_code = self.user_info.lang_code
 		self.content = message.text
@@ -65,9 +77,9 @@ class TelegramCommand():
 			self.command = self.get_command(self.content, self.lang_code)
 
 	def execute(self):
-		#if (self.content == get_message("back_button", self.lang_code)): 
-		#	self.command = self.get_command(self.additional_user_info.prev_func, "en")
-		#	self.command = self.get_command(self.command["back_function"], "en")
+		if (self.content == get_message("back_message", self.lang_code)): 
+			self.command = self.get_command(self.user_info.prev_func, "en")
+			self.command = self.get_command(self.command["back_function"], "en")
 
 		r = self.command["function"](self.message)
 		return r
@@ -93,6 +105,9 @@ class TelegramCommand():
 	def greetings(self, message):
 		response = {}
 		response["menu"] = get_menu("main_menu", self.lang_code)
+		self.user_info.prev_func = ""
+		self.user_info.current_command = ""
+		self.user_info.save()
 		if self.lang_code == "ru":
 			response["text"] = "<b>Здарова!</b>"
 		else:
@@ -114,6 +129,8 @@ class TelegramCommand():
 			response["text"] = "<b>Пора выполнять задания!</b>"
 		else:
 			response["text"] = "<b>It's time to complete the tasks!</b>"
+		self.user_info.prev_func = self.content
+		self.user_info.save()
 		if self.user_task:
 			response["menu"] = get_menu("if_have_task_menu", self.lang_code)
 		else:
@@ -228,6 +245,69 @@ class TelegramCommand():
 		response["menu"] = get_menu("main_menu", self.lang_code)
 		return response
 
+	def give_output_menu(self,message):
+		output_list = WithdrawalMethods.objects.values("name").filter(is_active = True)
+		self.user_info.current_command = "process_output"
+		self.user_info.prev_func = "Withdrawal of funds"
+		self.user_info.save()
+		response = {}
+		response["menu"] = get_menu("output_menu", self.lang_code, output_list)
+		response["text"] = get_message("output_message", self.lang_code)
+		return response
+
+	def process_output(self,message):
+		self.user_info.withdrawal_method = self.content
+		self.method = WithdrawalMethods.objects.get(name = self.content)
+		response = {}
+		if self.user_info.pocket > self.method.min_withdrawal:
+			self.user_info.prev_func = "process_output"
+			self.user_info.current_command = "process_input_wallet_id"
+			self.user_info.save()
+			if self.user_info.pocket_id == None:
+				response["text"] = get_message("get_wallet_id_message", self.lang_code, self.method.example)
+				response["menu"] = get_menu("back_menu", self.lang_code)
+			else:
+				response["text"] = get_message("prev_wallet_id_message", self.lang_code, self.user_info.pocket_id)
+				response["menu"] = get_menu("yes_no_menu", self.lang_code)
+		else:
+			response["text"] = get_message("small_balance_message", self.lang_code, self.method.min_withdrawal)
+			response["menu"] = get_menu("back_menu", self.lang_code)
+		return response
+
+	def process_input_wallet_id(self,message):
+		response = {}
+		if self.content == "Да" or self.content == "Yes":
+			response["text"] = get_message("pay_message",self.lang_code, self.user_info.pocket)
+			withdrawal = Withdrawal.objects.create(user = self.user_info,
+				method = self.method,
+				outcome = self.user_info.pocket,
+				payout_id = self.user_info.pocket_id)
+			self.user_info.current_command = ""
+			self.user_info.pocket = 0
+			self.user_info.save()
+			response["menu"] = get_menu("main_menu",self.lang_code)
+		elif self.content == "Нет" or self.content == "No":
+			self.user_info.pocket_id = None
+			self.user_info.save()
+			response["text"] = get_message("get_wallet_id_message", self.lang_code, self.method.example)
+			response["menu"] = get_menu("back_menu", self.lang_code)
+		else:
+			regex = re.compile(self.method.regex)
+			if re.fullmatch(regex, self.content):
+				response["text"] = get_message("pay_message", self.lang_code, self.user_info.pocket)
+				withdrawal = Withdrawal.objects.create(user = self.user_info,
+					method = self.method,
+					outcome = self.user_info.pocket,
+					payout_id = self.content)
+				self.user_info.pocket_id = self.content
+				self.user_info.pocket = 0
+				self.user_info.current_command = ""
+				self.user_info.save()
+				response["menu"] = get_menu("main_menu", self.lang_code)
+			else:
+				response["text"] = get_message("wrong_pattern_id_message", self.lang_code)
+				response["menu"] = get_menu("back_menu", self.lang_code)
+		return response
 
 @bot.message_handler(commands=['start'])
 def greetings(message):
