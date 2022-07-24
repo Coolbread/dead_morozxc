@@ -18,6 +18,7 @@ class Userinfo(models.Model):
 	force_check = models.BooleanField(default = False ,blank = True)
 	pocket_id = models.CharField(max_length = 255, default=None,blank = True, null = True)
 	withdrawal_method = models.CharField(max_length = 32, default=None,blank = True, null = True)
+	name_category = models.CharField(max_length = 255, default=None,blank = True, null = True)
 
 class UserImage(models.Model):
 	userI = models.ForeignKey("Userinfo", default=None, null = True, blank=True, on_delete = models.SET_DEFAULT)
@@ -27,6 +28,8 @@ class UserImage(models.Model):
 class UserTask(models.Model):
 	userI = models.ForeignKey("Userinfo", default=None, null = True, blank=True, on_delete = models.SET_DEFAULT)
 	userImage = models.OneToOneField("UserImage", default=None, null = True, blank=True, on_delete = models.SET_DEFAULT)
+	category = models.ForeignKey("TaskCategory", default = None, null = True, blank = True, on_delete = models.SET_DEFAULT)
+	account = models.ForeignKey("Accounts", default = None, null = True, blank = True, on_delete = models.SET_DEFAULT)
 	status = models.CharField(max_length = 15, default=None, blank = True, null = True)
 	#Статус будет иметь значения: Done - задание сделано, Skipped - задание было пропущено(неважно с помощью какой кнопки)
 	#Given - задание в процессе выполнения
@@ -40,6 +43,17 @@ class UserTask(models.Model):
 	comment_username = models.CharField(max_length = 255, default=None, blank = True, null = True)
 	comment = models.CharField(max_length = 255, default=None, blank = True, null = True)
 	create_date = models.DateTimeField(default=timezone.now)
+
+class TaskCategory(models.Model):
+	ru_name = models.CharField(max_length = 255, default=None, blank = True, null = True)
+	en_name = models.CharField(max_length = 255, default=None, blank = True, null = True)
+	need_account = models.BooleanField()
+	category_id = models.CharField(max_length = 20, default = None, blank = True, null = True) 
+
+class Accounts(models.Model):
+	userI = models.ForeignKey("Userinfo", default=None, null = True, blank=True, on_delete = models.SET_DEFAULT)
+	account_name = models.CharField(max_length = 256, blank = True, null = True, default = None)
+	creation_date = models.DateTimeField(default = timezone.now)
 
 class WithdrawalMethods(models.Model):
 	name = models.CharField(max_length = 32)

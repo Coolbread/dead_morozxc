@@ -1,12 +1,12 @@
 def f1(extra_info,lang_code):
-	item = {"ru": "<b>Твоё задание: </b>" + extra_info["action"] + "\n" +\
-	"<b>Ссылка: </b>" + extra_info["link"] + "\n" +\
-	"<b>Награда: </b>" + str(extra_info["reward"]) + "\n" +\
-	"<b>Дополнительно: </b>" + extra_info["comment"],
-	"en" : "<b>Your task is: </b>" + extra_info["action"] + "\n" +\
-	"<b>Link: </b>" + extra_info["link"] + "\n" +\
-	"<b>Reward: </b>" + str(extra_info["reward"]) + "\n" +\
-	"<b>Additionaly: </b>" + extra_info["comment"]}
+	item = {"ru": "<b>Твоё задание: </b>" + extra_info.action + "\n" +\
+	"<b>Ссылка: </b>" + extra_info.link + "\n" +\
+	"<b>Награда: </b>" + str(extra_info.reward) + "\n" +\
+	"<b>Дополнительно: </b>" + extra_info.comment,
+	"en" : "<b>Your task is: </b>" + extra_info.action + "\n" +\
+	"<b>Link: </b>" + extra_info.link + "\n" +\
+	"<b>Reward: </b>" + str(extra_info.reward) + "\n" +\
+	"<b>Additionaly: </b>" + extra_info.comment}
 	return item[lang_code]
 
 def f2(extra_info, lang_code):
@@ -85,6 +85,39 @@ def f16(extra_info,lang_code):
 			"en" : "The wallet ID was entered incorrectly! Double-check!"}
 	return item[lang_code]
 
+def f17(extra_info,lang_code):
+	st = ""
+	for ex in extra_info:
+		st += ex["account"] + "\n"
+	item = {"ru" : "Список аккаунтов с помощью которых ты выполнял это задание:" + "\n" + st + "Введите имя аккаунта.",
+			"en" : "The list of accounts with which you performed this task:" + "\n" + st + "Enter the account name."}
+	return item[lang_code]
+
+def f18(extra_info,lang_code):
+	item = {"ru" : "<b>Аккаунт: </b>" + extra_info["ru"],
+			"en" : "<b>Account: </b>" + extra_info["en"]}
+	return item[lang_code]
+
+def f19(extra_info,lang_code):
+	item = {"ru" : "Введите имя аккаунта.",
+			"en" : "Enter the account name."}
+	return item[lang_code]
+
+def f20(extra_info,lang_code):
+	item = {"ru" : "Ты уже пользовался данным юзернеймом!",
+			"en" : "You have already used this username!"}
+	return item[lang_code]
+
+def f21(extra_info,lang_code):
+	item = {"ru" : "Ты успешно привязал аккаунт к заданию! Пора выполнить его!",
+			"en" : "You have successfully linked your account to the task! It's time to fulfill it!"}
+	return item[lang_code]
+
+def f22(extra_info,lang_code):
+	item = {"ru" : "Не привязан аккаунт. Привяжи аккаунт к заданию которое ты выполнил и возвращайся за наградой!",
+			"en" : "The account is not linked. Link your account to the task you completed and come back for the reward!"}
+	return item[lang_code]
+
 def get_message(title, lang_code, extra_info = False):
 	message_list = [
 		{"title" : "task_message",
@@ -118,7 +151,19 @@ def get_message(title, lang_code, extra_info = False):
 		{"title" : "pay_message",
 		"function" : f15},
 		{"title" : "wrong_pattern_id_message",
-		"function" : f16}
+		"function" : f16},
+		{"title" : "get_account_message",
+		"function" : f17},
+		{"title" : "account_message",
+		"function" : f18},
+		{"title" : "get_first_time_account_message",
+		"function" : f19},
+		{"title" : "wrong_username_message",
+		"function" : f20},
+		{"title" : "success_account_message",
+		"function" : f21},
+		{"title" : "no_account_message",
+		"function" : f22}
 	]
 	
 	for m in message_list:

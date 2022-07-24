@@ -4,8 +4,15 @@ def f1(extra_info,lang_code):
 	return item[lang_code]
 
 def f2(extra_info,lang_code):
-	item = {"ru" : [["Дай задание"],["Назад"]],
-			"en" : [["Give me task"],["Back"]]}
+	ru_menu = []
+	en_menu = []
+	for ex in extra_info:
+		ru_menu.append([ex["ru_name"]])
+		en_menu.append([ex["en_name"]])
+	ru_menu += [["Назад"]]
+	en_menu += [["Back"]]
+	item = {"ru" : ru_menu,
+			"en" : en_menu}
 	return item[lang_code]
 
 def f3(extra_info, lang_code):
@@ -49,11 +56,18 @@ def f8(extra_info,lang_code):
 			"en" : [["Yes","No"],["Back"]]}
 	return item[lang_code]
 
+def f9(extra_info,lang_code):
+	item = {
+		"ru" : [["Дай другое задание", "Задание выполнено"],["Отменить задание","Привязать аккаунт"],["Назад"]],
+		"en" : [["Give me another task","Job is done"], ["Skip task","Link an account"], ["Back"]]
+	}
+	return item[lang_code]
+
 def get_menu(title,lang_code, extra_info = False):
 	menus_list = [
 		{"title" : "main_menu",
 		"function" : f1},
-		{"title" : "task_menu",
+		{"title" : "task_category_menu",
 		"function" : f2},
 		{"title" : "language_menu",
 		"function" : f3},
@@ -66,7 +80,9 @@ def get_menu(title,lang_code, extra_info = False):
 		{"title" : "back_menu",
 		"function" : f7},
 		{"title" : "yes_no_menu",
-		"function" : f8}
+		"function" : f8},
+		{"title" : "if_have_task+account_menu",
+		"function" : f9} 
 	] 
 
 	for m in menus_list:
