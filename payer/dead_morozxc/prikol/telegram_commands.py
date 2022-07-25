@@ -84,16 +84,7 @@ class TelegramCommand():
 			return
 
 		self.user_info = Userinfo.objects.get(user = self.u)
-		
-		try:
-			self.user_task = UserTask.objects.get(userI = self.user_info, status = "Given")
-		except:
-			self.user_task = None
-		
-		try:
-			self.method = WithdrawalMethods.objects.get(name = self.user_info.withdrawal_method)
-		except:
-			self.method = None
+		self.user_task = self.user_info.current_task
 		
 		self.message = message
 		self.lang_code = self.user_info.lang_code
@@ -113,18 +104,22 @@ class TelegramCommand():
 	
 	def process_language(self, message):
 		# Check if language set correctly 
+		response = {}
 		if (self.content == "Русский"):
 			self.lang_code = "ru"
 			self.user_info.current_command = None
 			self.user_info.lang_code = "ru"
 			self.user_info.save()
+			response["text"] = "<b>Пора выполнять задания!</b>"
+			response["menu"] = get_menu("main_menu", self.lang_code)
 		elif (self.content == "English"):
 			self.lang_code = "en"
 			self.user_info.current_command = None
 			self.user_info.lang_code = "en"
 			self.user_info.save()
+			response["text"] = "<b>It's time to complete the tasks!</b>"
+			response["menu"] = get_menu("main_menu", self.lang_code)
 		else:
-			response = {}
 			response["text"] = get_message("wrong_language", "en")
 			response["menu"] = get_menu("language_menu", "en")
 			return response
@@ -157,18 +152,11 @@ class TelegramCommand():
 		
 		if self.user_task:
 			if self.user_task.category.need_account:
-				if self.user_task.account == None:
-					extra = {"ru" : "Привяжите аккаунт к заданию во вкладке ниже.",
-							"en" : "Link the account to the task in the tab below."}
-					response["text"] = get_message("task_message",self.lang_code, self.user_task) + "\n" +\
-					get_message("account_message", self.lang_code, extra)
-					response["menu"] = get_menu("if_have_task+account_menu", self.lang_code)
-				else:
-					extra = {"ru" : self.user_task.account.account_name,
-							"en" : self.user_task.account.account_name}
-					response["text"] = get_message("task_message",self.lang_code, self.user_task) + "\n" +\
-					get_message("account_message", self.lang_code, extra)
-					response["menu"] = get_menu("if_have_task_menu", self.lang_code)					
+				extra = {"ru" : self.user_task.account.account_name,
+						"en" : self.user_task.account.account_name}
+				response["text"] = get_message("task_message",self.lang_code, self.user_task) + "\n" +\
+				get_message("account_message", self.lang_code, extra)
+				response["menu"] = get_menu("if_have_task_menu", self.lang_code)					
 			else:
 				response["text"] = get_message("task_message",self.lang_code, self.user_task)
 				response["menu"] = get_menu("if_have_task_menu", self.lang_code)
@@ -186,28 +174,52 @@ class TelegramCommand():
 
 	def process_get_category(self,message):
 		response = {}
-		if self.lang_code == "ru":
-			category = TaskCategory.objects.get(ru_name = self.content)
-		else:
-			category = TaskCategory.objects.get(en_name = self.content)
-		self.user_info.current_command = ""
-		t = task[category.category_id]
-		if t["status"] != "No tasks":			
-			user_t = UserTask.objects.create(status = t["status"],
-				task_id = t["task_id"],
-				link = t["link"],
-				social_network = t["social_network"],
-				action = t["action"],
-				reward = t["reward"],
-				comment = t["comment"],
-				userI = self.user_info,
-				category = category)
-			response["text"] = get_message("task_message", self.lang_code, user_t)
-			response["menu"] = get_menu("main_menu", self.lang_code)
+		try:
+			if self.lang_code == "ru":
+				category = TaskCategory.objects.get(ru_name = self.content)
+			else:
+				category = TaskCategory.objects.get(en_name = self.content)
+		except:
+			category = None
+		if category:
+			if category.need_account:
+				self.user_info.current_command = "process_get_account"
+				self.user_info.name_category = category.en_name
+				accounts = Accounts.objects.filter(userI = self.user_info, category = category)
+				if len(accounts) != 0:
+					account_list = []
+					for a in accounts:
+						acc = {"account" : a.account_name}
+						account_list.append(acc)
+					response["text"] = get_message("get_account_message", self.lang_code,account_list)
+					response["menu"] = get_menu("back_menu",self.lang_code)
+				else:
+					response["text"] = get_message("get_first_time_account_message",self.lang_code)
+					response["menu"] = get_menu("back_menu", self.lang_code)
+			else:
+				self.user_info.current_command = ""
+				t = task[category.category_id]
+				if t["status"] != "No tasks":			
+					user_t = UserTask.objects.create(status = t["status"],
+						task_id = t["task_id"],
+						link = t["link"],
+						social_network = t["social_network"],
+						action = t["action"],
+						reward = t["reward"],
+						comment = t["comment"],
+						userI = self.user_info,
+						category = category)
+					response["text"] = get_message("task_message", self.lang_code, user_t)
+					response["menu"] = get_menu("main_menu", self.lang_code)
 
+				else:
+					response["text"] = get_message("no_task_message", self.lang_code)
+					response["menu"] = get_menu("main_menu", self.lang_code)
 		else:
-			response["text"] = get_message("no_task_message", self.lang_code)
-			response["menu"] = get_menu("main_menu", self.lang_code)
+			category_list = TaskCategory.objects.values("ru_name","en_name")
+			self.user_info.current_command = "process_get_category"
+			response["text"] = get_message("wrong_category_message", self.lang_code)
+			response["menu"] = get_menu("task_category_menu", self.lang_code, category_list)
 		self.user_info.save()
 		return response
 
@@ -238,57 +250,71 @@ class TelegramCommand():
 		response = {}
 		self.user_info.current_command = ""
 		self.user_info.prev_func = "Tasks"
-		self.user_info.save()
-		task_list = UserTask.objects.filter(userI = self.user_info,task_id = self.user_task.task_id, status = "Done")
-		if len(task_list) != 0:
-			account_list = []
-			for ta in task_list:
-				if ta.account.account_name:
-					acc = {"account" : ta.account.account_name}
-					account_list.append(acc)
-			if len(account_list) == 0:
-				account_list = None
-		else:
-			account_list = None
+
+		category = TaskCategory.objects.get(en_name = self.user_info.name_category)
+		try:
+			account = Accounts.objects.get(account_name = self.content)
+		except:
+			account = None
 		fl = True
-		if account_list:
-			for acc in account_list:
-				if self.content == acc["account"]:
-					fl = False
-					response["text"] = get_message("wrong_username_message", self.lang_code)
-					response["menu"] = get_menu("if_have_task+account_menu", self.lang_code)
-					break
-			if fl:
-				account = Accounts.objects.create(userI = self.user_info,
-				account_name = self.content)
-				self.user_task.account = account
-				self.user_task.save()
-				response["text"] = get_message("success_account_message", self.lang_code)
-				response["menu"] = get_menu("if_have_task_menu",self.lang_code)
+		if account:
+			t = task[category.category_id]
+			if t["status"] != "No tasks":			
+				user_t = UserTask.objects.create(status = t["status"],
+					task_id = t["task_id"],
+					link = t["link"],
+					social_network = t["social_network"],
+					action = t["action"],
+					reward = t["reward"],
+					comment = t["comment"],
+					userI = self.user_info,
+					category = category,
+					account = account)
+				response["text"] = get_message("task_message", self.lang_code, user_t)
+				response["menu"] = get_menu("if_have_task_menu", self.lang_code)
+
+			else:
+				response["text"] = get_message("no_task_message", self.lang_code)
+				response["menu"] = get_menu("main_menu", self.lang_code)
 		else:
 			account = Accounts.objects.create(userI = self.user_info,
+			category = category,
 			account_name = self.content)
-			self.user_task.account = account
-			self.user_task.save()
-			response["text"] = get_message("success_account_message", self.lang_code)
-			response["menu"] = get_menu("if_have_task_menu",self.lang_code)
+			t = task[category.category_id]
+			if t["status"] != "No tasks":			
+				user_t = UserTask.objects.create(status = t["status"],
+					task_id = t["task_id"],
+					link = t["link"],
+					social_network = t["social_network"],
+					action = t["action"],
+					reward = t["reward"],
+					comment = t["comment"],
+					userI = self.user_info,
+					category = category,
+					account = account)
+				response["text"] = get_message("task_message", self.lang_code, user_t)
+				response["menu"] = get_menu("if_have_task_menu", self.lang_code)
+
+			else:
+				response["text"] = get_message("no_task_message", self.lang_code)
+				response["menu"] = get_menu("main_menu", self.lang_code)
+		self.user_info.current_task = user_t
+		self.user_info.save()
 		return response
+
+
 
 	def get_screen(self,message):
 		response = {}
-		if self.user_task.account:
-			self.user_info.prev_func = "Job is done"
-			self.user_info.current_command = "process_get_screen"
-			self.user_info.save()
+		self.user_info.prev_func = "Job is done"
+		self.user_info.current_command = "process_get_screen"
+		self.user_info.save()
 
-			if self.lang_code == "ru":
-				response["text"] = "<b>Кидай скриншот выполненного задания и награда твоя</b>"
-			else:
-				response["text"] = "<b>Send a screenshot of the completed task and the reward is yours</b>"
-			response["menu"] = get_menu("back_menu", self.lang_code)
+		if self.lang_code == "ru":
+			response["text"] = "<b>Кидай скриншот выполненного задания и награда твоя</b>"
 		else:
-			response["text"] = get_message("no_account_message",self.lang_code)
-			response["menu"] = get_menu("if_have_task+account_menu", self.lang_code) 
+			response["text"] = "<b>Send a screenshot of the completed task and the reward is yours</b>"
+		response["menu"] = get_menu("back_menu", self.lang_code)
 		return response
 	
 	def process_get_screen(self, message):
@@ -338,6 +364,8 @@ class TelegramCommand():
 		response["text"] = get_message("skip_message", self.lang_code)
 		self.user_task.status = "Skipped"
 		self.user_task.save()
+		self.user_info.current_task = None
+		self.user_info.save()
 		response["menu"] = get_menu("main_menu", self.lang_code)
 		return response
 
@@ -388,29 +416,33 @@ class TelegramCommand():
 
 	def process_output(self,message):
 		self.user_info.withdrawal_method = self.content
-		self.method = WithdrawalMethods.objects.get(name = self.content)
+		method = WithdrawalMethods.objects.get(name = self.content)
 		response = {}
-		if self.user_info.pocket > self.method.min_withdrawal:
+		if self.user_info.pocket > method.min_withdrawal:
 			self.user_info.prev_func = "process_output"
 			self.user_info.current_command = "process_input_wallet_id"
 			self.user_info.save()
 			if self.user_info.pocket_id == None:
-				response["text"] = get_message("get_wallet_id_message", self.lang_code, self.method.example)
+				response["text"] = get_message("get_wallet_id_message", self.lang_code, method.example)
 				response["menu"] = get_menu("back_menu", self.lang_code)
 			else:
 				response["text"] = get_message("prev_wallet_id_message", self.lang_code, self.user_info.pocket_id)
 				response["menu"] = get_menu("yes_no_menu", self.lang_code)
 		else:
-			response["text"] = get_message("small_balance_message", self.lang_code, self.method.min_withdrawal)
+			response["text"] = get_message("small_balance_message", self.lang_code, method.min_withdrawal)
 			response["menu"] = get_menu("back_menu", self.lang_code)
 		return response
 
 	def process_input_wallet_id(self,message):
 		response = {}
+		try:
+			method = WithdrawalMethods.objects.get(name = self.user_info.withdrawal_method)
+		except:
+			method = None
 		if self.content == "Да" or self.content == "Yes":
 			response["text"] = get_message("pay_message",self.lang_code, self.user_info.pocket)
 			withdrawal = Withdrawal.objects.create(user = self.user_info,
-				method = self.method,
+				method = method,
 				outcome = self.user_info.pocket,
 				payout_id = self.user_info.pocket_id)
 			self.user_info.current_command = ""
@@ -420,14 +452,14 @@ class TelegramCommand():
 		elif self.content == "Нет" or self.content == "No":
 			self.user_info.pocket_id = None
 			self.user_info.save()
-			response["text"] = get_message("get_wallet_id_message", self.lang_code, self.method.example)
+			response["text"] = get_message("get_wallet_id_message", self.lang_code, method.example)
 			response["menu"] = get_menu("back_menu", self.lang_code)
 		else:
-			regex = re.compile(self.method.regex)
+			regex = re.compile(method.regex)
 			if re.fullmatch(regex, self.content):
 				response["text"] = get_message("pay_message", self.lang_code, self.user_info.pocket)
 				withdrawal = Withdrawal.objects.create(user = self.user_info,
-					method = self.method,
+					method = method,
 					outcome = self.user_info.pocket,
 					payout_id = self.content)
 				self.user_info.pocket_id = self.content

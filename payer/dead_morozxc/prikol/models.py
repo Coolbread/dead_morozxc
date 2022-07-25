@@ -8,13 +8,14 @@ from django.contrib.auth.models import User
 
 class Userinfo(models.Model):
 	user = models.OneToOneField(User, default=None, null = True, blank=True, on_delete = models.CASCADE)
+	current_task = models.OneToOneField("UserTask", default = None, null = True, blank = True, on_delete = models.SET_DEFAULT)
 	chat_id = models.CharField(max_length = 255, default=None,blank = True, null = True)
 	current_command = models.CharField(max_length = 255, default=None,blank = True, null = True)
 	prev_func = models.CharField(max_length = 255, default=None,blank = True, null = True)
 	pocket = models.FloatField(blank = True, null = True, default = None)
 	count_tasks = models.IntegerField(blank = True, null = True, default = 0)
 	create_date = models.DateTimeField(default=timezone.now)
-	lang_code = models.CharField(max_length = 2, default=None,blank = True, null = True)
+	lang_code = models.CharField(max_length = 2, default= "en",blank = True, null = True)
 	force_check = models.BooleanField(default = False ,blank = True)
 	pocket_id = models.CharField(max_length = 255, default=None,blank = True, null = True)
 	withdrawal_method = models.CharField(max_length = 32, default=None,blank = True, null = True)
@@ -52,6 +53,7 @@ class TaskCategory(models.Model):
 
 class Accounts(models.Model):
 	userI = models.ForeignKey("Userinfo", default=None, null = True, blank=True, on_delete = models.SET_DEFAULT)
+	category = models.ForeignKey("TaskCategory", default = None, null = True, blank = True, on_delete = models.SET_DEFAULT)
 	account_name = models.CharField(max_length = 256, blank = True, null = True, default = None)
 	creation_date = models.DateTimeField(default = timezone.now)
 
